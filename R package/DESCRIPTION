@@ -1,0 +1,22 @@
+Package: mobicountR
+Type: Package
+Title: Improving present population counts using mobile phone data
+Version: 0.1.0
+Authors@R: person("Romain", "Avouac", email = "avouacr@gmail.com", role = c("aut", "cre"))
+Description: a flexible bayesian framework to improve present population counts using mobile phone data. 
+License: CC0
+Encoding: UTF-8
+LazyData: true
+Imports: 
+        minior,
+        dplyr,
+        rlang,
+        foreach,
+        sf,
+        readr,
+        stringr,
+        tidyr,
+        data.table,
+        leaflet,
+        RColorBrewer
+RoxygenNote: 6.1.1

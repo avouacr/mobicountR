@@ -1,0 +1,5 @@
+shp/fr_conti_borders_2018.shp
+
+uniform : line size = 0.25 (default)
+
+bdtopo & rfl : line size = 0.15
