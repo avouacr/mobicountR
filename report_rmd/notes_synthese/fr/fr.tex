@@ -1,5 +1,5 @@
 \documentclass[12pt]{article}
-\usepackage[margin=1in]{geometry}
+\usepackage[margin=0.9in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath,amssymb}
@@ -42,13 +42,13 @@ Ce modèle de localisation a de multiples avantages en pratique. Dans cette étu
 
 \section{Données}
 
-This analysis is based on a 2007 pseudonymised call detail records (CDR) dataset from major French MNO Orange. Five months of exhaustive activity of more than 18 million Orange customers is available, representing around 15 billion events. In order to take into account the unequal probabilities of presence on the territory, we exploit land use data from the BD TOPO as prior information. We validate our population estimates by comparing them to localized tax data, from which we get the number of people residing in each tile of the grid. Having this ground truth enables us to quantify the gain in quality due to using relevant prior information.
+Nous exploitons un jeu de données CDR datant de 2007, fourni par l'opérateur Orange. Il contient la trace numérique de l'ensemble des appels et SMS passés par les 18 millions de clients d'Orange durant 5 mois en 2007, soit au total 15 milliards d'évènements. Afin de tenir compte de l'inégale répartition de la population sur le territoire, nous utilisons les données sur le bâti indifférencié issues de la BD TOPO comme information \textit{a priori}. Nous validons nos estimations de population en les comparant aux données fiscales localisées (RFL), à partir desquelles nous calculons les densités de population sur la grille. Le fait de disposer de ces données exhaustives comme validation nous permet de quantifier de manière précise le gain de qualité permis par l'ajout d'information \textit{a priori}.
 
 \section{Résultats}
 
-The visual comparison of population density maps at France level highlights a dramatic improvement in the replication of the ground truth population distribution. This conjecture is confirmed by statistical analysis : using outliers-robust metrics, we find both a substantial increase in correlations between population distributions and a reduction by half of absolute estimation error on average.  We also use tools from spatial statistics to show that we better replicate the autocorrelation structure of the ground truth distribution.
+La comparaison visuelle des cartes nationales de densités de population permet d'observer un gain de qualité considérable de l'estimation de population. Une analyse statistique confirme ce premier constat : à partir de métriques robustes à la présence de valeurs extrêmes, nos résultats indiquent une forte hausse de la corrélation entre les distributions de population, ainsi qu'une réduction de moitié de l'erreur absolue d'estimation en moyenne. Enfin, des outils issus de la statistique spatiale nous permettent de mettre en évidence une meilleur réplication de la structure d'autocorrélation de la distribution de validation.
 
-Yet, we find that the estimated distribution remains characterized by either under- or over-estimation of population in important cities and their suburbs. We hypothesize that insufficient quality of antennae coverage modelization and temporal scarcity of the data are the main factors to explain this limit. Reproducing this study on more recent data from signalling sources could greatly reduce these shortcomings.
+Malgré ce gain de qualité, les distributions estimées restent caractérisées par de fortes erreurs d'estimation dans les grandes villes et leur alentours. Nous avançons deux explications à la persistence de telles erreurs : une qualité insuffisante de la modélisation de la couverture théorique des antennes, et une trop faible profondeur temporelle des données CDR. L'exploitation de données de \textit{signalling} (données passives) devrait permettre de fortement limiter ces erreurs.
 
 
 \end{document}
