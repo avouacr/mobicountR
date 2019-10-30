@@ -1,10 +1,6 @@
-# Application 1 : Orange 2007 CDR data {#orange2007}
+# Application to home detection in the absence of technical information on antennae {#orange2007}
 
-## Summary
-
-In this section, we present an application of the bayesian framework to population estimation using a 2007 dataset from French MNO Orange. Since no technical information on antennae are available for these data, we rely on the Voronoi approximation to model coverage areas, similarly to previous studies based on this dataset (Vanhoof et al., 2018 ; Galiana et al., 2018). We use the bayesian model to map events observed at Voronoi level on a regular grid in a probabilized way. This transition enables us to make use of available prior information on grid tiles. Adding a prior is what fundamentally allows localization of phone users to depart from a purely Voronoi based one.
-
-Throughout the study, we compare results from using two different priors : an uninformative one — which constitutes our baseline, since it basically amounts to estimating population using solely the Voronoi approximation — and a prior based on land use data (housing volume). Validation is performed by comparing population estimates in these two configurations to French localized tax data, from which we get the number of people legally residing in each tile of the grid. Since tax data characterize *resident* population, we subset mobile phone data so as to estimate *nightly present* population and thus remain as close to the concept measured by validation data as possible. Using multiple metrics, we provide evidence that the land use prior substantially improves population estimates as compared to baseline. Yet, the gain in quality mainly occurs in rural and peri-urban areas, whereas densely populated areas remain poorly estimated. We hypothesize that these differences are mainly due to to the absence of technical information on antennae as well as insufficient temporal resolution of the mobile phone data at hand. 
+In this section, we present an application of the bayesian framework to resident population estimation using a 2007 dataset from French MNO Orange. Since no technical information on antennae are available for these data, we rely on the Voronoi approximation to model coverage areas, similarly to previous studies based on this dataset. The bayesian model is used to map events observed at Voronoi level on a regular grid in a probabilized way. This interpolation enables us to make use of available prior information on grid tiles. We provide multiple evidence that the bayesian model substantially improves population estimates as compared to baseline from previous works. 
 
 ## Data
 
@@ -12,9 +8,9 @@ Throughout the study, we compare results from using two different priors : an un
 
 This analysis is based on a 2007 pseudonymised call detail records (CDR) dataset from major French MNO Orange. CDR keep tracks of mobile phone users activity, such as sending or receiving a call or a text message. As shown in table \@ref(tab:exampleCDR2007), we know for each event the unique identifiers of the caller and the callee, event type, duration, and the unique identifier of the cell. Five months of exhaustive activity of more than 18 million Orange customers is available, representing around 15 billion events.
 
-As detailed below, we validate our population estimates using localized tax data. These data give information on legal residence of French households, and so characterize resident population. For the comparison to be relevant, we focus on home detection, i.e. predicting people likely place of residence. This is done by subsetting mobile phone data at two temporal levels. First, we restrain the analysis to September 2007 data, which is the month with less holiday of the time period (June-October) we have access to. Yet another important reason is purely technical : the probabilistic method of localization we implement is much more computationally intensive than previous methods in the literature, which relied on deterministic home detection. This restriction thus also serves to limit computational load. Similarly, we restrict daily tracks to the 19:00-09:00 time span. This choice is based on results presented by Vanhoof et al. (2018), who find that this particular time interval maximizes correlation between estimates and validation data.
+As detailed below, we validate our population estimates using localized tax data. These data give information on legal residence of French households, and so characterize resident population. For the comparison to be relevant, we focus on home detection, i.e. predicting people likely place of residence. This is done by subsetting mobile phone data at two temporal levels. First, we limit the analysis to September 2007 data, so as to measure a concept of mensual residence. Besides, September is the month with less holiday of the time period (June-October) we have access to. Finally, another reason is purely technical : the probabilistic method of localization we implement is much more computationally intensive than previous methods in the literature, which relied on deterministic home detection. This restriction thus also serves to limit computational load. Similarly, we restrict daily tracks to the 19:00-09:00 time span. This choice is based on results presented by Vanhoof et al. (2018), who find that this particular time interval maximizes correlation between population estimates and validation data.
 
-We shall already outline an important limitation of this dataset. In 2007, mobile phone use wasn't nearly as ubiquitous as it is today. Besides, as these data come from CDR, only users actions are recorded, but not automatic connections of mobile phones to the network — as oppose to signalling data, which we use in section \@ref(orange2019). A direct result of these shortcomings is temporal scarcity of individual tracks (table \@ref(tab:statCDR2007)). Half of Orange customers use their phone at least four times a day, with a high heterogeneity between them in this regard. Yet, most users appear regularly in the dataset over the month, which is useful as we seek to analyse regularity of their location. Not surprisingly, these statistics drop when we restrict the time range to 19:00-09:00. Despite this obvious limitation, we are still able to observe most users at least 7 times during the month for an average of two events per day.
+We shall already outline an important limitation of this dataset. In 2007, mobile phone use wasn't nearly as ubiquitous as it is today. Besides, as these data come from CDR, only users actions are recorded, but not automatic connections of mobile phones to the network — as opposed to signalling data. A direct result of these shortcomings is temporal scarcity of individual tracks (figure \@ref(fig:statsdescusers2007)). Half of Orange customers use their phone at least three times a day, with a high heterogeneity between them in this regard. Yet, most users appear regularly in the dataset over the month, which is useful as we seek to analyse regularity of their location. Not surprisingly, these statistics drop when we restrict the time range to 19:00-09:00. Despite this obvious limitation, we are still able to observe most users at least 7 times during the month for an average of two events per night.
 
 <!-- -------------------------------------------------------------------------- -->
 
@@ -34,34 +30,26 @@ Timestamp & Caller & Callee & Event & Duration (sec.) & Area\_id & Cell\_id \\
 
 <!-- -------------------------------------------------------------------------- -->
 
-\begin{table}[]
-\caption{Orange 2007 CDR : summary statistics of September data}
-\label{tab:statCDR2007}
+\begin{figure}[t]
+\caption{Orange 2007 CDR : summary statistics of users activity in September}
+\label{fig:statsdescusers2007}
 \centering
-\begin{tabular}{p{0.3\linewidth}ccccccccc}
-\toprule
-& mean & s.d. & min & P10 & P25 & median & P75 & P90 & max  \\
-\midrule
-Average number of daily events per user & $4.3$ & $3.6$ & $1$ & $1.4$ & $2$ & $3.1$ & $5.4$ & $8.7$ & $123$ \\ 
-Number of distincts days users appear & $20$ & $9.2$ & $1$ & $5$ & $13$ & $23$ & $28$ & $30$ & $30$ \\ 
-Average number of daily events between 7PM and 9AM per user & $2.4$ & $1.7$ & $0$ & $1$ & $1.3$ & $1.9$ & $2.9$ & $4.4$ & $87$ \\
-Number of distincts days users appear between 7PM and 9AM & $15.2$ & $9.4$ & $0$ & $2$ & $7$ & $15$ & $24$ & $28$ & $30$ \\
-\midrule
-\multicolumn{4}{l}{Number of observations: } & \multicolumn{2}{c}{3,024,884,663} \\
-\multicolumn{4}{l}{Number of unique phone users:} & \multicolumn{2}{c}{18,541,440} \\
-\bottomrule
-\end{tabular}
-\end{table}
+
+\subfloat[][Average number of daily events per user]{
+\includegraphics[width=0.44\textwidth]{sections/3_orange2007/stats_desc_daily_events.jpg}}
+\qquad
+\subfloat[][Number of distinct days users appear]{
+\includegraphics[width=0.44\textwidth]{sections/3_orange2007/stats_desc_nb_distinct_days.jpg}}
+
+\end{figure}
 
 <!-- -------------------------------------------------------------------------- -->
 
 ### Prior information on grid tiles
 
-Various data sources can be mobilized to add prior information on tiles of the grid. Relevant source choice for prior depends on the exact concept of present population we seek to measure. As we choose to focus on nightly present population, we want a prior which gives more weight in the localization of mobile phone users to residential areas. We can't choose geolocated tax data for this purpose as we already use it as validation dataset. 
+Various data sources can be mobilized to add prior information on tiles of the grid. Relevant source choice for prior depends on the exact concept of present population we seek to measure. As we choose to focus on nightly present population, we want a prior which gives more weight in the localization of mobile phone users to residential areas. We can't choose geolocated tax data for this purpose as we already use it as validation dataset.
 
-Against that background, we resort to the BD TOPO, a dataset on land cover and land use maintained by the French mapping agency (IGN). The BD TOPO provides a three-dimensional vectorial description of French territory elements (forest, hydrography...) and infrastructures (transport infrastructures, energy networks...). Notably, it provides an exhaustive vectorial description of buildings, classified in various types based on their use. As we seek to measure nightly present population, we focus on the "other building" type (*bâti indifférencié*), described as buildings with a minimal area of 20 m² which does not possess any attributed function. This type of building mainly consists in housing, but also encompasses public buildings which can't be classified in other types, such as schools, hospitals, museums, etc. 
-
-We have access to the BD TOPO "other building" dataset in the form of shapefiles, one for each French department. A building is described as a polygon, i.e. a series of geographical coordinates characterizing all its vertex. In order to get the best approximation of the number of people residing in each tile of the grid, we want to compute a building volume per tile. This is easily done for each building, since area and height are in the dataset[^height_imputation]. The next step is more complicated : we seek to attribute buildings to their corresponding tile, while taking into account the fact that some buildings can straddle several tiles. To deal with these specific cases, we rely on spatial analysis intersection function to split polygons between tiles accordingly. As this step proves very computationally expensive, it is parallelized over departement shapefiles to reduce computation time. After having computed building volume per tile, the last step is to normalize it over the grid to get a probability distribution which can be used as prior in the bayesian model.
+Against that background, we resort to the BD TOPO, a dataset on land cover and land use maintained by the French mapping agency (IGN). The BD TOPO provides a three-dimensional vectorial description of French territory elements (forest, hydrography...) and infrastructures (transport infrastructures, energy networks...). Notably, it provides an exhaustive vectorial description of buildings, classified in various types based on their use. As we seek to measure nightly present population, we focus on the "other building" type (*bâti indifférencié*), described as buildings with a minimal area of 20 m² which does not possess any attributed function. This type of building mainly consists in housing, but also encompasses public buildings which can't be classified in other types, such as schools, hospitals, museums, etc. In order to get the best approximation of the number of people residing in each tile of the grid, we take advantage of the presence of building heights in the dataset to compute a building volume per tile[^height_imputation]. This volume is then normalized over the grid to get a probability distribution which can be used as prior in the bayesian model.
 
 [^height_imputation]: Height is missing for about 10 % of buildings. We impute them using closest neighbour rule inside each department.
 
@@ -69,9 +57,9 @@ We have access to the BD TOPO "other building" dataset in the form of shapefiles
 
 ### Validation data
 
-In order to be able to estimate potential quality gain of population counts due to the bayesian framework, we need to compare our estimates to a validation dataset. However, in most applications involving mobile phone data, no ground truth data (e.g. GPS tracks) are available. As a result, most authors in the literature resort to "high-level" validation data (Vanhoof et al., 2018) by comparing their estimates with population counts from census data. This solution is problematic in the sense that it doesn't enable the creation of performance metrics at individual level to optimize location algorithms. However, in absence of such ground truth data, "high-level" validation data still appear as a satisfying solution to validate population estimates.
+In order to be able to estimate potential quality gain of population counts due to the bayesian framework, we need to compare our estimates to a validation dataset. However, in most applications involving mobile phone data, no ground truth data are available. As a result, most authors in the literature resort to "high-level" validation data by comparing their estimates with population counts from census data (Deville et al., 2014). This solution is problematic in the sense that it doesn't enable the creation of performance metrics at individual level to optimize location algorithms. However, in absence of such ground truth data, "high-level" validation data still appear as a satisfying solution to validate population estimates.
 
-As aforementioned, localized tax data can be useful as a validation tool for population estimates. Here, we use Insee (French National Institute of Statistics and Economic Studies) localized tax income device (RFL). This dataset gives information on the fiscal income at residence level for more than 26 million French households. For our purpose, its main interest is that it is geocoded, so that we have access to the number of people in each household as well as geographic coordinates of their (tax) residence. Using these coordinates, we attribute each household of the dataset to the grid tile in which its residence is located. As a result, we obtain resident population counts over the same grid on which we map mobile phone events, which can then be uses as a benchmark for our population estimates.
+Localized tax data can be useful as a validation tool for population estimates (Vanhoof et al., 2018). Here, we use Insee (French National Institute of Statistics and Economic Studies) localized tax income device (RFL). This dataset gives information on the fiscal income at residence level for more than 26 million French households. For our purpose, its main interest is that it is geocoded, so that we have access to the number of people in each household as well as geographic coordinates of their (tax) residence. Using these coordinates, we attribute each household of the dataset to the grid tile in which its residence is located. As a result, we obtain resident population counts over the same grid on which we map mobile phone events, which can then be uses as a benchmark for our population estimates.
 
 One important limitation of this dataset is that we use 2011 income tax year, since it is the oldest available year for which tax data were exhaustive. We thus make the assumption that population patterns did not change much during this time span.
 
@@ -81,9 +69,9 @@ One important limitation of this dataset is that we use 2011 income tax year, si
 
 ### Implementation of the bayesian framework in the absence of technical data on antennae
 
-The Orange 2007 CDR dataset has been extensively studied in the litterature. As no technical information on antennae is available for these data, most of these works rely on the Voronoi tessellation approximation. Besides, home detection is generally performed in a deterministic way, in the sense that a single most likely place of residence is assigned to each phone user. This allocation is performed using various heuristics, such as maximum activity ("home is the cell tower where most activities of the user occurred during a specific observation period") or distinct days ("home is the cell tower where the maximum active days of a user were observed during a specific observation period") [see Vanhoof et al., 2018 for a detailed presentation of possible heuristics and their respective performance].
+The Orange 2007 CDR dataset has been extensively studied in the litterature. As no technical information on antennae is available for these data, most of these works rely on the Voronoi tessellation approximation (Vanhoof et al., 2018 ; Galiana et al., 2018 ; Sakarovitch et al., 2019). Besides, home detection is generally performed in a deterministic way, in the sense that a single most likely place of residence is assigned to each phone user. This allocation is performed using various heuristics, such as maximum activity ("home is the cell tower where most activities of the user occurred during a specific observation period") or distinct days ("home is the cell tower where the maximum active days of a user were observed during a specific observation period") [see Vanhoof et al., 2018 for a detailed presentation of possible heuristics and their respective performance].
 
-Since no technical information on antennae is available, we can't fully abstract ourselves from the Voronoi approximation : for each phone event, the only geographical information we have are coordinates of the antenna which processed the action. However, for the reasons explained in section \@ref(framework), we want to be able to map events on a given input grid rather than Voronoi tessellation, which sizes only depend on the spatial distribution of antennae. Similarly to Galiana et al. (2018), we transition from the Voronoi tessellation to a regular grid composed of tiles of 500x500 meters, covering metropolitan France. Such a grid offers a good compromise between fine spatial resolution of the mapping and computational load. Table \@ref(tab:statspatialunits2007) provides descriptive statistics on the different spatial units used and their relations.
+Since no technical information on antennae is available, we can't fully abstract ourselves from the Voronoi approximation : for each phone event, the only geographical information we have are coordinates of the antenna which processed the action. However, for the reasons explained in section \@ref(framework), we want to be able to map events on a given input grid rather than Voronoi tessellation, which sizes only depend on the spatial distribution of antennae. Similarly to Galiana et al. (2018), we interpolate events from the Voronoi tessellation to a regular grid composed of tiles of 500x500 meters, covering metropolitan France. Such a grid offers a good compromise between fine spatial resolution of the mapping and computational load. Table \@ref(tab:statspatialunits2007) provides descriptive statistics on the different spatial units used and their relations.
 
 \begin{table}[t]
 \caption{Descriptive statistics on spatial units}
@@ -93,7 +81,7 @@ Since no technical information on antennae is available, we can't fully abstract
 \toprule
 & mean & s.d. & min & P10 & P25 & median & P75 & P90 & max  \\
 \midrule
-Number of tiles per Voronoi polygon & $142$ & $179$ & $1$ & $4$ & $12$ & $62$ & $224$ & $390$ & $1,788$ \\ 
+Number of tiles per Voronoi polygon & $142$ & $179$ & $1$ & $4$ & $12$ & $62$ & $224$ & $390$ & $1,788$ \\
 Number of Voronoi polygons per tile & $1$ & $0$ & $1$ & $1$ & $1$ & $1$ & $1$ & $2$ & $28$ \\
 \midrule
 \multicolumn{4}{l}{Number of Voronoi polygons: } & \multicolumn{2}{c}{18,084} \\
@@ -102,11 +90,11 @@ Number of Voronoi polygons per tile & $1$ & $0$ & $1$ & $1$ & $1$ & $1$ & $1$ & 
 \end{tabular}
 \end{table}
 
-The bayesian framework makes it possible to transition from Voronoi polygons $(v_j)_j$ to tiles $(t_i)_i$ of the grid in a probabilistic way, while at the same time incorporating prior information on the grid. We adjust the general framework presented in section \@ref(framework) to this specific use case : 
+The bayesian framework makes it possible to transition from Voronoi polygons $(v_j)_j$ to tiles $(t_i)_i$ of the grid in a probabilistic way, while at the same time incorporating prior information on the grid. We adjust the general framework presented in section \@ref(framework) to this specific use case :
 \begingroup \large
 $$\mathbb{P}(t_i | v_j) \propto \mathbb{P}(t_i) \mathbb{P}(v_j | t_i)$$
 \endgroup
-Given that a phone event has been observed in Voronoi polygon $j$ — which is equivalent to say that it has been observed at associated antenna (cell) $j$ — we are interested in computing the posterior distribution $(\mathbb{P}(t_i | v_j))_i$ in order to map this event to the grid. As no information on antennae coverage areas is available, we model the likelihood by the relative shares of tiles which intersect Voronoi polygon $j$ : 
+Given that a phone event has been observed in a Voronoi polygon $j$ — which is equivalent to say that it has been observed by the associated antenna (cell) $j$ — we are interested in computing the posterior distribution $(\mathbb{P}(t_i | v_j))_i$ in order to map this event to the grid. As no information on antennae coverage areas is available, we use simple areal weighting to model the likelihood :
 \begingroup \large
 $$
 \mathbb{P}(v_j | t_i) =\frac{s(t_i \cap v_j)}{s(v_j)}
@@ -114,9 +102,7 @@ $$
 \endgroup
 where $s(t_i \cap v_j)$ is the area of the intersection between tile $i$ and Voronoi polygon $j$, and $s(v_j)$ is the total area of Voronoi polygon $j$. Any probability distribution over tiles $(\mathbb{P}(t_i))_i$ can be used as prior information.
 
-At the level of a given individual, we thus transition from a track made of individual events $(v_{j_1}, ..., v_{j_m})$ observed with certainty at Voronoi level to a larger sequence of events $((c_{i_1}, ..., c_{i_n}), ..., (c_{i_1}, ..., c_{i_n}))$ observed at grid level with probabilities $((p_1^{j_1}, ..., p_I^{j_1}), ..., (p_1^{j_m}, ..., p_I^{j_m})$. These probabilities are normalized so that they add up to one for each individual. Thus, by summing probability sequences of all individuals, we get present population counts at grid level, which add up to the number of distinct Orange customers in the 2007 dataset. A simplified example of this process is presented in figure \@ref(fig:exspatialmap). 
-
-[^edge_effects]: Actually, some changes can occur for tiles which intersect two or more Voronoi polygons, since events are mapped on tiles based on their relative share in the polygon(s) they intersect. Figure \@ref(fig:exspatialmap) illustrates such a case. In practice, such edge effects produce limited change in population estimates at tile level for two reasons. First, most Voronoi polygons over the territory have substantial size and thus contain many tiles (see figure \@ref(fig:exspatialmap)), which limits edge effects occurrence. Second, because population distributions generally exhibit high level of spatial autocorrelation (see section \@ref(spatialmetrics2007) for a detailed discussion over this concept). Thus, nearby Voronoi polygons tend to be similar in terms of population density, which limits the magnitude of edge effects.
+At the level of a given individual, we thus transition from a track made of individual events $(v_{j_1}, ..., v_{j_m})$ observed with certainty at Voronoi level to a larger sequence of events $((c_{i_1}, ..., c_{i_n}), ..., (c_{i_1}, ..., c_{i_n}))$ observed at grid level with probabilities $((p_1^{j_1}, ..., p_I^{j_1}), ..., (p_1^{j_m}, ..., p_I^{j_m})$. These probabilities are normalized so that they add up to one for each individual. Thus, by summing probability sequences of all individuals, we get present population counts at grid level, which add up to the number of distinct Orange customers in the 2007 dataset. A simplified example of this process is presented in figure \@ref(fig:exspatialmap).
 
 <!-- -------------------------------------------------------------------------- -->
 
@@ -125,25 +111,25 @@ At the level of a given individual, we thus transition from a track made of indi
 \label{fig:exspatialmap}
 \centering
 \subfloat[]{
-\includegraphics[width=0.3\textwidth]{sections/6_appendix_A/voro1.png}}
+\includegraphics[width=0.3\textwidth]{sections/3_orange2007/ex_voronoi_to_grid/voro1.png}}
 \qquad
 \subfloat[]{
-\includegraphics[width=0.3\textwidth]{sections/6_appendix_A/voro2.png}}
+\includegraphics[width=0.3\textwidth]{sections/3_orange2007/ex_voronoi_to_grid/voro2.png}}
 
 \subfloat[]{
-\includegraphics[width=0.28\textwidth]{sections/6_appendix_A/grid1.png}}
+\includegraphics[width=0.28\textwidth]{sections/3_orange2007/ex_voronoi_to_grid/grid1.png}}
 \qquad
 \subfloat[]{
-\includegraphics[width=0.28\textwidth]{sections/6_appendix_A/grid2.png}}
+\includegraphics[width=0.28\textwidth]{sections/3_orange2007/ex_voronoi_to_grid/grid2.png}}
 \qquad
 \subfloat[]{
-\includegraphics[width=0.28\textwidth]{sections/6_appendix_A/grid3.png}}
+\includegraphics[width=0.28\textwidth]{sections/3_orange2007/ex_voronoi_to_grid/grid3.png}}
 
 \subfloat[]{
-\includegraphics[width=0.3\textwidth]{sections/6_appendix_A/prior1.png}}
+\includegraphics[width=0.3\textwidth]{sections/3_orange2007/ex_voronoi_to_grid/prior1.png}}
 \qquad
 \subfloat[]{
-\includegraphics[width=0.3\textwidth]{sections/6_appendix_A/prior2.png}}
+\includegraphics[width=0.3\textwidth]{sections/3_orange2007/ex_voronoi_to_grid/prior2.png}}
 
 \fnote{Lecture : this plot illustrates home detection process for a given phone user with a fictive example.
 We focus on two specific Voronoi polygons $v_1$ and $v_2$ (a). Let's assume that, over the month, 2/3 of the nightly phone events of the user are located in $v_2$ — i.e. processed by the corresponding antenna — and 1/3 are located in $v_1$ (b). We allocate these events to the grid based on conditional probabilities $(\mathbb{P}(t_i | v_j))_{i,j}$, computed via Bayes' formula. If allocation is performed using only relative shares of tiles in the Voronoi polygon they intersect (see (c) and (d)) — i.e. if we use an uninformative prior equal to 1 for all tiles — then probabilistic home detection is given by (e). But let's assume that housing volumes are higher in tiles located at the South of the grid (f). In this case, probabilistic home detection is modified when the prior is incorporated (g).}
@@ -151,15 +137,17 @@ We focus on two specific Voronoi polygons $v_1$ and $v_2$ (a). Let's assume that
 
 <!-- -------------------------------------------------------------------------- -->
 
-The ability to add any available prior information on grid tiles is a distinctive feature of the bayesian model of localization. It proves especially useful when no technical information on antennae is available. Indeed, if we choose an uninformative prior equal to one for all observations, events are mapped on grid tiles based solely on their relative share in the Voronoi polygon which they intersect. In this case, the model basically boils down to an estimation directly at Voronoi level[^edge_effects], as events are assumed to be uniformly distributed over the tiles wich intersect a given Voronoi polygon. Adding relevant prior information is thus what fundamentally allows localization of phone users to depart from a purely Voronoi based one.
+The ability to add any available prior information on grid tiles is a distinctive feature of the bayesian model of localization. It proves especially useful when no technical information on antennae is available. Indeed, if we choose an uninformative prior equal to one for all observations, events are mapped on grid tiles based solely on their relative share in the Voronoi polygon which they intersect. In this case, the model basically boils down to an estimation directly at Voronoi level[^edge_effects], as events are assumed to be uniformly distributed over the tiles wich intersect a given Voronoi polygon. Sakarovitch et al. (2019) show that this uniform interpolation — which they perform at city level — is actually the main cause of estimation error, with an almost one for one ratio. Since adding prior information is what fundamentally allows localization of phone users to depart from a purely Voronoi based one, it has important potential for mitigating such interpolation error.
+
+[^edge_effects]: Actually, some changes can occur for tiles which intersect two or more Voronoi polygons, since events are mapped on tiles based on their relative share in the polygon(s) they intersect. Figure \@ref(fig:exspatialmap) illustrates such a case. In practice, such edge effects produce limited change in population estimates at tile level for two reasons. First, most Voronoi polygons over the territory have substantial size and thus contain many tiles (see figure \@ref(fig:exspatialmap)), which limits edge effects occurrence. Second, because population distributions generally exhibit high level of spatial autocorrelation (see section \@ref(spatialmetrics2007) for a detailed discussion over this concept). Thus, nearby Voronoi polygons tend to be similar in terms of population density, which limits the magnitude of edge effects.
 
 ### Statistical adjustement of the sample
 
-The final step of the detection process is to make resulting estimates comparable with general population. They can diverge for two main reasons. First, population estimates are computed using data from customers of a single MNO (Orange), who represent only a given share of the population. Second, we must take into account the penetration rate, i.e. the fact that some people don't own a mobile phone whereas some people own several ones. Furthermore, there rates are known to be quite heterogeneous over the territory. To overcome these issues, we must adjust our sample in the following way : 
+The final step of the detection process is to make resulting estimates comparable with general population. They can diverge for two main reasons. First, population estimates are computed using data from customers of a single MNO (Orange), who represent only a given share of the population. Second, we must take into account the penetration rate of mobile phones, i.e. the fact that some people don't own any phone whereas some people own several ones. Furthermore, there rates are known to be quite heterogeneous over the territory. To overcome these issues, we must adjust our sample in the following way :
 $$
 \widehat{N}_i = \frac{N_{PHD_i}}{\tau_i.\alpha_i}
 $$
-where $N_{PHD_i}$ represents population count of spatial unit $i$ resulting from the probabilistic home detection, $\tau_i$ the penetration rate in spatial unit $i$, and $\alpha_i$ Orange market share in spatial unit $i$. Similarly to Sakarovitch et al. (2019), we adjust our sample to make it representative of general population using Orange client list (CL) in 2007 at department level. The number of Orange customers living in department k is estimated using customers addresses in this list. Since addresses are not available for all customers, we adjust by the size of this file. Finally, we obtain department $k$ market share by dividing the estimated number of customers living there by the total number of people living in this departement according to tax data :
+where $N_{PHD_i}$ represents population count of spatial unit $i$ resulting from the probabilistic home detection, $\tau_i$ the penetration rate in spatial unit $i$, and $\alpha_i$ Orange market share in spatial unit $i$. Similarly to Sakarovitch et al. (2019), we adjust our sample to make it representative of general population using Orange customer relationship management (CRM) in 2007 at department level. The number of Orange customers living in department k is estimated using customers addresses in this list. Since addresses are not available for all customers, we adjust by the size of this file. Finally, we obtain department $k$ market share by dividing the estimated number of customers living there by the total number of people living in this departement according to tax data :
 $$
 \widehat{\tau_k.\alpha_k} = \frac{\frac{Tot_{PHD}}{Tot_{CL}}.N_{CL_k}}{N_{TAX_k}}
 $$
@@ -169,7 +157,7 @@ These adjustments place our population estimates in a same order of magnitude as
 
 ### Validation metrics {#metrics2007}
 
-In order to evaluate the performance of the bayesian model of localization, we rely on several metrics to compare population estimates with validation data. First, we estimate Pearson's $r$ correlation coefficient, which is the most used indicator in similar works. For a vector of population estimates $\vec{x}$ and a vector of validation population data $\vec{y}$ of the same length n — the number of grid tiles — it is defined as : 
+In order to evaluate the performance of the bayesian model of localization, we rely on several metrics to compare population estimates with validation data. First, we estimate Pearson's $r$ correlation coefficient, which is the most used indicator in similar works (Deville et al., 2014 ; Vanhoof et al., 2018 ; Sakarovitch et al., 2019). For a vector of population estimates $\vec{x}$ and a vector of validation population data $\vec{y}$ of the same length n — the number of grid tiles — it is defined as :
 $$
 r(\vec{x}, \vec{y}) = \frac{\sum_{i=1}^n (x_i- \bar{x}) (y_i- \bar{y})}{\sqrt{\sum_{i=1}^n (x_i- \bar{x})^2 \sum_{i=1}^n(y_i- \bar{y})^2}}
 $$
@@ -177,13 +165,13 @@ Pearson's $r$ indicates both direction and strength of the linear relationship b
 $$
 \rho(\vec{x}, \vec{y}) = r(\overrightarrow{rg_x}, \overrightarrow{rg_y})
 $$
-Spearman's correlation test is lest restrictive than Pearson's in the sense that it assesses any monotonic relationship between estimates and validation vectors, not only a linear one. This property makes it useful for comparison of spatial distributions of population, which often exhibit nonlinearities. Besides, the rank transformation makes it robust to the presence of outliers.
+Spearman's correlation test is less restrictive than Pearson's in the sense that it assesses any monotonic relationship between estimates and validation vectors, not only a linear one. This property makes it useful for comparison of spatial distributions of population, which often exhibit nonlinearities. Besides, the rank transformation makes it robust to the presence of outliers.
 
-Previous applications in the literature have often relied on correlation as validation metric because they didn't take into account market shares of the MNO, and thus couldn't directly compare estimates to validation data. The statistical adjustment we make using Orange client list enables us to directly quantify differences between estimates and validation counts. Again, we use two different metrics to do so in order to take into accounts specificities of population distributions. First, we estimate the root mean squared error (RMSE) — also often called root mean squared deviation (RMSD). Using the same notations as above, it is defined formally as : 
+The statistical adjustment we make using Orange client list enables us to directly quantify differences between estimates and validation counts. Again, we use two different metrics to do so in order to take into accounts specificities of population distributions. First, we estimate the root mean squared error (RMSE) — also often called root mean squared deviation (RMSD). Using the same notations as above, it is defined formally as :
 $$
 RMSE(\vec{x}, \vec{y}) = \sqrt{\frac{1}{n} \sum_{i=1}^n (y_i - x_i)^2}
 $$
-We also estimate the mean absolute error (MAE), defined as : 
+We also estimate the mean absolute error (MAE), defined as :
 $$
 MAE(\vec{x}, \vec{y}) = \frac{1}{n} \sum_{i=1}^n |y_i - x_i|
 $$
@@ -195,31 +183,33 @@ These two measures are both frequently employed as accuracy measures of statisti
 
 The validation metrics we presented above summarize the statistical link between estimates and validation distributions, and enable an evaluation of mean estimation error. However, they are aspatial in nature, in the sense that they would give identical results for any random permutation of grid tiles on the map. Yet population repartition patterns are obviously far from being randomly distributed, with high population densities in cities and their suburbs, and conversely low population densities in rural areas. Furthemore, transitions from low density to high density areas tend to happen in a smooth way rather than abruptly. This property, which characterizes most spatial distributions, is called spatial autocorrelation : neighbouring spatial units tend to exhibit similar values of a given variable. Against that background, another important way to evaluate the quality gain of our estimates is thus to check whether they are able to reproduce the underlying spatial structure of resident population repartition. We resort to spatial analysis tools to explore this demension.
 
-First, we can determine whether the distributions we analyze are characterized by the presence of spatial autocorrelation. Several indices have been developped for this purpose. Generally speaking, they consist in computing the correlation between spatially close observations of a given phenomenon. "Closeness" is assessed by a spatial weights matrix W, whose elements $(w_{ij})_{i,j}$ are such that $w_{ij} = 1$ if grid tiles $i$ and $j$ are contiguous. If we denote the observed variable as $\vec{x}$, the general form of spatial autocorrelation indices is given by : 
+First, we can determine whether the distributions we analyze are characterized by the presence of spatial autocorrelation. Several indices have been developped for this purpose. Generally speaking, they consist in computing the correlation between spatially close observations of a given phenomenon. "Closeness" is assessed by a spatial weights matrix W, whose elements $(w_{ij})_{i,j}$ are such that $w_{ij} = 1$ if grid tiles $i$ and $j$ are contiguous[^spatial_matrix]. If we denote the observed variable as $\vec{x}$, the general form of spatial autocorrelation indices is given by :
 $$
 Corr(Y, WY) = \frac{Cov(Y, WY)}{\sqrt{V(Y)V(WY)}}
 $$
-In this study, we choose to rely on Moran's I index (Moran, 1948), which is often preferred to other spatial autocorrelation indices in the literature beacause of greater stability (Upton et al., 1985). Keeping the same notations as above, it is defined as : 
+In this study, we choose to rely on Moran's I index (Moran, 1948), which is often preferred to other spatial autocorrelation indices in the literature beacause of greater stability (Upton et al., 1985). Keeping the same notations as above, it is defined as :
 $$
 I_W = \frac{n}{\sum_i \sum_j w_{ij}}\frac{\sum_i \sum_j w_{ij}(x_i-\bar{x})(x_j-\bar{x})}{\sum_i(x_i-\bar{x})^2} \:\:\: \text{for} \: i \neq j
 $$
-Moran's I enables to test whether neighbouring observations co-vary relatively to the variance of the distribution. The null hypothesis is that neighbours do not co-vary in any particular way, in which case $I_W = 0$. A strictly positive Moran's I indicates positive spatial autocorrelation, meaning that similar values of the observed variable tend to cluster geographically. The test is performed using the z-score : 
+Moran's I enables to test whether neighbouring observations co-vary relatively to the variance of the distribution. The null hypothesis is that neighbours do not co-vary in any particular way, in which case $I_W = 0$. A strictly positive Moran's I indicates positive spatial autocorrelation, meaning that similar values of the observed variable tend to cluster geographically. The test is performed using the z-score :
 $$
 \frac{I_W - E(I_W)}{\sqrt{V(I_W)}} \overset{H_0}{\sim} \mathcal{N}(0,1)
 $$
-where : 
+where :
 $$
 E(I_W) = - \frac{1}{n-1}
 $$
-and : 
+and :
 $$
 V(I_W) = \frac{n[(n^2-3n+3)S_1-nS_2+3S_0^2]-k[(n^2-n)S_1-2nS_2+6S_0^2]}{(n-1)(n-2)(n-3)S_0^2}
 $$
 with $S_0 = \sum_i \sum_j W_{ij}$, $S_1 = 2 \sum_i\sum_j W_{ij}$, $S_2 = 4 \sum_i W_{i.}^2$ and $k = \frac{\sum_i (x_i-\bar{x})^4/n}{(\sum_i (x_i-\bar{x})^2/n)^2}$.
 
+[^spatial_matrix]: There are many other possible ways to define neighbourhood structure : based on a distance, taking a given number of nearest neighbours, etc. We choose to rely on contiguity for simplicity purpose : computing a contiguity matrix involves much less operations than computing distances between pairs of tiles. This is particularly important in our case due to the high number of grid tiles.
+
 Moran's I makes it possible to test for the presence of spatial autocorrelation in the distributions we analyse. In particular, it is useful to check whether the distributions of estimation errors exhibit spatial autocorrelation, which can highlight possible systematic bias of our model. Yet, Moran's I doesn't provide any information on the specific structure of autocorrelation when its presence is acknowledged. As such, it is thus not sufficient to determine which of our estimates distributions better replicate the actual spatial structure of resident population repartition. Surprisingly, the literature dealing with the problem of statistically comparing two maps is rather sparse, and no fully satisfactory solution emerges. Lee (2001) develops a bivariate spatial association measure by integrating Pearsons'r and Moran's I in a single statistic. However, this so-called L statistic has undesirable properties. First, the value of the L statistic between a given spatial distribution and itself is not equal to one but rather to a measure of the spatial autocorrelation level exhibited by the distribution, which renders difficult its interpretation. Second, the measure remains based on Pearson's r and thus can still be significantly altered when outliers are present. Levine et al. (2009) propose a statistical procedure for comparing outputs from ecological niche models. But it relies on the hypothesis that mean pixel difference scores have a normal distribution, which appears unlikely in our case due to the aforementioned peculiarities of population distributions. Finally, another possibility we explored was to use local spatial autocorrelation measures, such as Moran's local I (Anselin, 1995). These measures quantify the degree of spatial autocorrelation exhibited by each spatial unit — in our case, each tile of the grid — based on its value and the values of its neighbours. Such an approach has been used by Wulder et al. (2007) to compare outputs from a forest growth model. An important shortcoming of these measures is that they are very computationally expensive to compute as they are not easily vectorized, due to their local nature. As a result, we could only compute them in areas of limited size.
 
-Against these limitations of spatial analysis tools to compare the spatial structures of two distributions, we also provide an analysis inspired by fractal geometry, similar to Sémécurbe et al. (2018). Basically, it consists in comparing the way population is spatially distributed at several nested spatial resolutions. We consecutively aggregate our 500x500 meters grid into 1km, 2km, 4km, 8km and 16km grids respectively. For each population distribution (home detection with uniform prior, home detection with land use prior and localized tax data), we compute an entropy measure at each resolution to summarise the amount of information contained in the distribution. Then, again for each population distribution, we compute the differences in entropy between subsequent scales — these differences correspond to the fractal dimensions — which intuitively represent the amount of information required to be able to transition from the aggregated level to the disaggregated level. Equivalently, it quantifies the degree of randomness of the spatial structure of the distribution : a fractal dimension close to 2 indicates a uniform distribution, whereas a fractal dimension close to 0 characterizes a highly concentrated distribution. Many entropy measures can be used to perfom the analysis, which are all based on Rényi's general formula of entropy (Rényi, 1961). 
+Against these limitations of spatial analysis tools to compare the spatial structures of two distributions, we also provide an analysis inspired by fractal geometry, similar to Sémécurbe et al. (2018). Basically, it consists in comparing the way population is spatially distributed at several nested spatial resolutions. We consecutively aggregate our 500x500 meters grid into 1km, 2km, 4km, 8km and 16km grids respectively. For each population distribution (home detection with uniform prior, home detection with land use prior and localized tax data), we compute an entropy measure at each resolution to summarise the amount of information contained in the distribution. Then, again for each population distribution, we compute the differences in entropy between subsequent scales — these differences correspond to the fractal dimensions — which intuitively represent the amount of information required to be able to transition from the aggregated level to the disaggregated level. Equivalently, it quantifies the degree of randomness of the spatial structure of the distribution : a fractal dimension close to 2 indicates a uniform distribution, whereas a fractal dimension close to 0 characterizes a highly concentrated distribution. Many entropy measures can be used to perfom the analysis, which are all based on Rényi's general formula of entropy (Rényi, 1961).
 $$
 H_\alpha(X) = \frac{1}{1-\alpha} \text{log} \sum_i P(X=x_i)^{\alpha}
 $$
@@ -230,6 +220,10 @@ where X is a random variable representing population repartition over the grid, 
 ### Computation of results
 
 Let's briefly detail how the steps of the analysis are carried out in practice to produce the results presented below. Computation of priors and posterior distributions is performed using the R functions presented in the previous section. The output of this first step is a table which gives for each Voronoi-grid intersection the value of the posterior, for each available prior. This table is then used as an input for the home detection step. Because of the massive amount of data that CDR represent — several terabytes in total — this second step is performed using big data framework Spark on an HDFS (Hadoop Distributed File System — distributed storage platforms specifically designed for big data tasks) infrastructure, at the MNO office. The output of the second step is a table which gives for each prior estimated population counts over the grid. Finally, computation of statistics on this table are performed using R again, and spatial representations are produced using QGIS (an open source geographic information system (GIS) application optimized for viewing spatial data), apart from kernel smoothing which is performed using the R package *btb*.
+
+## Results
+
+Two configurations of the bayesian model of phone users localization are estimated. In the first one, we use an uninformative prior equal to one. We call it "uniform prior" because it assumes that probabilities of a given phone event are uniformly distributed over the tiles which intersect the Voronoi polygon in which it is detected. This configuration is very close to what has been used in the literature using Orange 2007 CDR dataset (notably Galiana et al., 2018), and thus constitues our baseline estimates. In the second configuration, we estimate the bayesian model with a land use prior, which we also call "bdtopo prior" in reference to the statistical source from which it was computed. Below, we present several analyses which aim at quantifying the gain in accuracy of population counts due to the land use prior. To do so, we compare population distributions computed with each prior to the reference one, computed from localized tax data.
 
 <!-- -------------------------------------------------------------------------- -->
 
@@ -260,13 +254,13 @@ Let's briefly detail how the steps of the analysis are carried out in practice t
 
 <!-- -------------------------------------------------------------------------- -->
 
-## Results
-
-Two configurations of the bayesian model of phone users localization are estimated. In the first one, we use an uninformative prior equal to one. We call it "uniform prior" because it assumes that probabilities of a given phone event are uniformly distributed over the tiles which intersect the Voronoi polygon in which it is detected. This configuration is very close to what has been used in the literature using Orange 2007 CDR dataset (notably Galiana et al., 2018), and thus constitues our baseline estimates. In the second configuration, we estimate the bayesian model with a land use prior, which we also call "bdtopo prior" in reference to the statistical source from which it was computed. Below, we present several analyses which aim at quantifying the gain in accuracy of population counts due to the land use prior. To do so, we compare population distributions computed with each prior to the reference one, computed from localized tax data.
-
 First, we plot the two estimated population distributions as well as the reference one over the grid at France level (maps (a), (b) and (c) of figure \@ref(fig:densitepop2007)). These maps enable a direct visual comparison of spatial repartition of the population in each configuration. Since distributions are heavily right-tailed, we use log transformation for better representation. Tiles with no inhabitant are classified in the lowest density range. Map (a) shows that we are still highly reliant on the Voronoi approximation, as shapes of Voronoi polygons appear quite clearly[^not_voronoi_maps]. It also highlights one of the main limitation of this hyptohesis : when comparing with reference (c), it appears that the population of many areas is overestimated. Most specifically, it seems that a lot of rural areas — characterized by large size Voronoi polygons — are slightly to severely overestimated. Urban areas appear too big in size as compared to reference, leading to visible overestimates in their suburbs. Comparatively, the distribution of population estimated using land use prior appears much more similar to the reference one. Adding the prior dramatically improves the replication of sparsity of population distribution over French territory. This first analysis can be confirmed by plotting in each tile difference to reference data regarding population counts, for each prior (maps (d) and (e)). Again, we observe that the main effect of adding the land use prior is to "clean" layers of population overestimation, particulary around important cities. However, at first glance, the land use prior doesn't seem to solve issues of either under- and over-estimation in large cities, particularly noticeable for Paris and its suburbs.
 
 [^not_voronoi_maps]: We shall make emphasize that in map (a), we are not representing population counts per Voronoi polygon. Such a map would be semantically incorrect, since Voronoi polygons are heterogenous in size. Here, population counts are represented over (regular) grid tiles. The fact that Voronoi polygon shapes appear is a direct consequence of the Voronoi approximation we rely on for the estimation and the fact that using an uniform prior doesn't modify the distribution.
+
+This graphical assessment of the quality gain of population estimates due to the land use prior can be confirmed by a statistical comparison of the two estimated distributions with the reference one (table \@ref(tab:metrics2007)). We use the various validation metrics presented in section \@ref(metrics2007). First, we compare Pearson's $r$ linear correlation coefficient. Using this metric, the gain from using the land use prior appears rather small (ten percentage points), thus contrasting sharply with graphical comparison. However, as previously discussed, multiple issues arise when comparing correlation coefficients with distributions such as population counts. As evident from figure \@ref(fig:scatterphdref), population distributions are heavily concentrated around low values, but exhibit very long right tales. It is thus likely that outliers artificially increase correlation coefficients : very high values of population estimates co-occur with very high values of validation population. Furthermore, these distributions exhibit obvious heteroscedasticity[^log_transformation]. Comparison of Spearman's $\rho$ coefficients appears to confirm this analysis. The coefficient with uniform prior is seriously reduced (39 percentage points) while the coefficient with land use prior improves (8 percentage points). Correlation analysis performed using Spearman's coefficient thus suggests a dramatic improvement of the shape of population estimates distribution due to the land use prior which was not captured using Pearson's coefficient.
+
+[^log_transformation]: A method which is often used to mitigate the effects of outliers and heteroscedasticity in such distributions is to apply log transformation to variables of interest. Here, this method is problematic since population distributions over the French territory exhibit high proportion of uninhabited tiles whereas the log function is not defined in zero. We use it for representation purpose in figure \@ref(fig:densitepop2007) by classifying uninhabited tiles with lowest density tiles. However, it wouldn't be rigorous to perform correlation analysis using this simplification.
 
 <!-- -------------------------------------------------------------------------- -->
 
@@ -275,14 +269,14 @@ First, we plot the two estimated population distributions as well as the referen
 \label{tab:metrics2007}
 \setlength{\tabcolsep}{5pt}
 \centering
-\begin{tabular}{@{} l SSSS @{}} 
+\begin{tabular}{@{} l SSSS @{}}
 \toprule
-Prior   &  \multicolumn{4}{c @{}}{Metric }\\ 
+Prior   &  \multicolumn{4}{c @{}}{Metric }\\
 \cmidrule(l){2-5}
     & {Pearson's $r$} & {Spearman's $\rho$} & {Root mean squared error} & {Mean absolute error}  \\
 \midrule
-Uniform & 0.69 & 0.3 & 159.5 & 32.6 \\ 
-Bdtopo & 0.79 & 0.87 & 149.7 & 16.8 \\ 
+Uniform & 0.69 & 0.3 & 159.5 & 32.6 \\
+Bdtopo & 0.79 & 0.87 & 149.7 & 16.8 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -304,17 +298,11 @@ Bdtopo & 0.79 & 0.87 & 149.7 & 16.8 \\
 
 <!-- -------------------------------------------------------------------------- -->
 
-This graphical assessment of the quality gain of population estimates due to the land use prior can be confirmed by a statistical comparison of the two estimated distributions with the reference one (table \@ref(tab:metrics2007)). We use the various validation metrics presented in section \@ref(metrics2007). First, we compare Pearson's $r$ linear correlation coefficient. Using this metric, the gain from using the land use prior appears rather small (ten percentage points), thus contrasting sharply with graphical comparison. However, as previously discussed, multiple issues arise when comparing correlation coefficients with distributions such as population counts. As evident from figure \@ref(fig:scatterphdref), population distributions are heavily concentrated around low values, but exhibit very long right tales. It is thus likely that outliers artificially increase correlation coefficients : very high values of population estimates co-occur with very high values of validation population. Furthermore, these distributions exhibit obvious heteroscedasticity[^log_transformation]. Comparison of Spearman's $\rho$ coefficients appears to confirm this analysis. The coefficient with uniform prior is seriously reduced (39 percentage points) while the coefficient with land use prior improves (8 percentage points). Correlation analysis performed using Spearman's coefficient thus suggests a dramatic improvement of the shape of population estimates distribution due to the land use prior which was not captured using Pearson's coefficient.
-
-[^log_transformation]: A method which is often used to mitigate the effects of outliers and heteroscedasticity in such distributions is to apply log transformation to variables of interest. Here, this method is problematic since population distributions over the French territory exhibit high proportion of uninhabited tiles whereas the log function is not defined in zero. We use it for representation purpose in figure \@ref(fig:densitepop2007) by classifying uninhabited tiles with lowest density tiles. However, it wouldn't be rigorous to perform correlation analysis using this simplification.
-
 We come to similar conclusions when we assess average estimation errors relatively to validation data. Using root mean squared error (RMSE), we find that including the land use prior reduces average error by only 6 %. However, using mean absolute error (MAE) gives very different results. First, errors of estimation are much less important (PHD misallocates between 16 and 32 people by tile on average, against 150 to 160 using RMSE). Besides, the improvement due to the land use prior is much more pronounced : the average error rate is halved. As discussed before, this difference in conclusions between the two metrics is likely due to the way they are defined : RMSE gives much more weight to important errors, whereas MAE weights all errors equally. This discrepancy thus tends to confirm the analysis we made by comparing maps of distributions in figure \@ref(fig:densitepop2007) : the land use prior removes small to moderates errors, but it doesn't solve issues of important under- and over-estimation which are observed in big cities and their suburbs (also clearly visible in figure \@ref(fig:scatterphdref)).
-
-This last claim is further confirmed when we compare estimates with each prior depending on tile's "true" population according to validation data. 50 % of empty tiles are rightly declared as not populated with land use prior, against only 2 % with uniform prior. In figure \@ref(fig:proconprior2007), we extend this analysis by comparing misallocations with each prior, depending on tile's population. Graph (a) confirms that the land use prior greatly reduces the number of grid tiles in which some people are detected whereas there should be none according to tax data. Conversely, graph (b) points out that the land use prior tends to result in too many tiles declared as empty whereas they shouldn't be. However, this latter effect is of very limited magnitude, which strongly supports the use of land use prior in the bayesian model of localization.
 
 <!-- -------------------------------------------------------------------------- -->
 
-\begin{figure}[t]
+\begin{figure}[h]
 \caption{Advantage and shortcoming of land use prior for probabilistic home detection (PHD)}
 \label{fig:proconprior2007}
 \centering
@@ -331,31 +319,33 @@ This last claim is further confirmed when we compare estimates with each prior d
 
 <!-- -------------------------------------------------------------------------- -->
 
+This last claim is further confirmed when we compare estimates with each prior depending on tile's "true" population according to validation data. 50 % of empty tiles are rightly declared as not populated with land use prior, against only 2 % with uniform prior. In figure \@ref(fig:proconprior2007), we extend this analysis by comparing misallocations with each prior, depending on tile's population. Graph (a) confirms that the land use prior greatly reduces the number of grid tiles in which some people are detected whereas there should be none according to tax data. Conversely, graph (b) points out that the land use prior tends to result in too many tiles declared as empty whereas they shouldn't be. However, this latter effect is of very limited magnitude, which strongly supports the use of land use prior in the bayesian model of localization.
+
 Statistical analysis substantiates the improvement in population estimates quality due to the land use prior. But apart from the visual comparison of maps done with figure \@ref(fig:densitepop2007), we didn't take into account the spatial dimension in the analysis. Indeed, all the results presented above would hold true for any random permutation of the grid on the map. However, spatial autocorrelation — or lack thereof — is a major property of spatial distributions, which we must take into account for comparisons to be relevant. We thus resort to spatial analysis tools in order to describe this dimension of population counts.
 
 Table \@ref(tab:globalmoran2007) displays the results of the testing procedure for the presence of spatial autocorrelation, based on global Moran's I statistic. All three population distributions, the two estimated ones and the validation one, exhibit significant and substantial levels of spatial autocorrelation. Besides, the ordering of the coefficients appear consistent. PHD with uniform prior exhibits the highest level of autocorrelation : since population is distributed uniformly in each Voronoi polygon, most neighbouring tiles display the same population count. Conversely, PHD with land use prior exhibits the lowest level of autocorrelation. This might be explained by its tendency to declare too much tiles as having no building volume (see figure \@ref(fig:proconprior2007)), which mechanically set them as empty, whatever the number of phone calls detected in the corresponding Voronoi polygon. We also find that estimation errors, computed as absolute difference between home detection with each prior and localized tax data, are characterized by significant spatial autocorrelation. This result is consistent with the findings obtained by visual inspection of maps (d) and (e) of figure \@ref(fig:densitepop2007) : with both priors, there are evidence of substantial clustering of overestimation in urban centers and of either over- or under-estimation in city suburbs. More surprising is the fact that they exhibit a similar level of clustering : for the same reasons as explained above, errors tend to be the same for whole Voronoi polygons when using uniform prior, so that we could have expected higher spatial autocorrelation. However, the main effect of incorporating the land use prior is precisely to remove this type of errors in rural and peri-urban areas. We thus end up with a similar level of clustering, since tiles with no more error are mechanically grouped together.
 
-\begin{table}[t] \centering 
+\begin{table}[t] \centering
 \caption{Spatial autocorrelation of population distributions and estimation errors}
 \label{tab:globalmoran2007}
-\begin{tabular}{@{\extracolsep{5pt}} lcc} 
-\hline \\[-1.8ex] 
-Variable & Moran's I & p-value \\ 
-\hline \\[-1.8ex] 
-PHD with uniform prior & 0.78 & 0.00 \\ 
-PHD with land use prior & 0.69 & 0.00 \\ 
-Local tax data & 0.74 & 0.00 \\ 
-Estimation error with uniform prior & 0.37 & 0.00 \\ 
-Estimation error with land use prior & 0.36 & 0.00 \\ 
+\begin{tabular}{@{\extracolsep{5pt}} lcc}
+\hline \\[-1.8ex]
+Variable & Moran's I & p-value \\
+\hline \\[-1.8ex]
+PHD with uniform prior & 0.78 & 0.00 \\
+PHD with land use prior & 0.69 & 0.00 \\
+Local tax data & 0.74 & 0.00 \\
+Estimation error with uniform prior & 0.37 & 0.00 \\
+Estimation error with land use prior & 0.36 & 0.00 \\
 \hline
-\end{tabular} 
-\end{table} 
+\end{tabular}
+\end{table}
 
 While spatial analysis tools are useful to detect the presence of autocorrelation in the distributions, it is yet not sufficient to determine whether we better reproduce the underlying spatial structure of resident population repartition. We thus propose a method inspired by fractal analysis to try to quantify the additional information on the spatial structure of population provided by the use of the bdtopo prior (figure \@ref(fig:scalediff)). The comparison of entropy evolution distributions suggests that adding the land use prior substantially improves the replication of changes in information over scales, as evident from the proximity of the curves corresponding to localized tax data and PHD with the bdtopo prior. Besides, the ordering of the curves appears coherent : the values of information differences over scales using the uniform prior are consistently above the two others, confirming the much higher uniformity of this distribution observed in figure \@ref(fig:densitepop2007). Not surprisingly, the distributions converge for the higher scales : at these levels of aggregation, differences in population counts between spatial units are much less heterogeneous, so that no distribution stands out in terms of information structure.
 
 <!-- -------------------------------------------------------------------------- -->
 
-\begin{figure}[t]
+\begin{figure}[h]
 \caption{Effect of scale change on Shannon's entropy measure}
 \label{fig:scalediff}
 \centering
@@ -368,7 +358,7 @@ Another way to take into acount the spatial dimension of population repartition 
 
 <!-- -------------------------------------------------------------------------- -->
 
-\begin{figure}[!h]
+\begin{figure}[h]
 \caption{Accuracy gain of population counts due to the use of land use prior at department level}
 \label{fig:evaldep2007}
 \centering
@@ -391,16 +381,12 @@ As an illustration of this finding, we focus on two examples at opposite ends of
 
 Our results indicate substantial improvement of the quality of population estimates due to adding prior information on land use in the bayesian model of localization. Specifically, the main effect of the land use prior appears to be the removal of small to moderates overestimation errors all over French territory. However, it doesn't solve issues of major under- and over-estimation which characterize important cities and their suburbs. Various explanations can be put forward to explain the existence of these errors and the fact they are not mitigated by the addition of prior information on tiles.
 
-First, we still rely on the Voronoi approximation to estimate population counts. When a phone event is localized in a given Voronoi polygon, the use of prior information on tiles will just ensure that it is projected on the grid in a relevant way, i.e. by taking into account unequal probabilities of nightly presence on the territory. However, the event remains bound to be allocated to tiles which belong to or intersect the Voronoi polygon, whereas it is entirely possible that the user is actually localized in another Voronoi polygon. This shortcoming alone could constitutes a major source of the misallocations observed in urban areas. In rural areas, where antennae distribution is very sparse and thus Voronoi polygons much wider than average, the Voronoi approximation seems more justified : in such configuration, antenna cells tend to be macro cells (i.e. cells covering very wide areas, often in a circular way) and thus the approximation can actually fit technical reality. On the contrary, it doesn't appear justified in urban areas : as evident from figure \@ref(fig:voronoi2007), Voronoi polygons are much smaller in urban reas, and are even often smaller than our grid tiles in centers of major cities. In this case, the Voronoi approximation produces substantial bias since it doesn't account for overlapping of antennae coverage areas. Besides, adding prior information on land use doesn't make any change because of low number of tiles per Voronoi polygons, and the fact that housing tends to be uniformly distributed in dense areas. In section \@ref(orange2019), we make use of the availability of antennae coverage maps based on waves propagation models from the MNO to mitigate this source of error. 
-
-Another potential explanation for these errors could be that the concept of present population we measure is not the same over the territory. Urban areas are characterized by distinctive behaviours : tourism, the importance of social activities (restaurants, movies theaters, ...), different working hours, etc. As a result, the time window to which we restrict the sample of mobile phone events (19:00 to 09:00) — chosen so as to provide information regarding places of residence, while at the same time ensuring sufficient nightly observations because of tracks temporal scarcity — might capture more events which interfere with home detection than in rural areas. A careful examination of overestimation areas in major French cities gives weight to this hypothesis : overestimation particularly occurs in places known to be highly touristic (historical city centers, commercial areas, places with a lot of hotels...) as well as in transport key points (railway stations, airports). The land use prior fails to mitigate this type of errors because these areas are generally residential, and transport key points are classified in BD Topo "Bâti indifférencié" type because of their public nature. This analysis suggests that some of the differences between estimates and validation data in urban areas may not be errors, but simply due to measuring temporarily present population rather than nightly residing one. In section \@ref(orange2019), we take advantage of the much greater temporal resolution of tracks from signalling data to optimize time span restriction.
-
-Finally, some limitations associated to the data sources we exploit might explain observed differences in a more general way. For availability reasons, we are constrained to deal with data sources observed at different temporality — 2007 for mobile phone data, 2011 for localized tax data, and 2015 for BD Topo. We thus make the hypothesis that evolutions are not meaningful enough to produce significant bias. Besides, some differences might be produced by the statistical adjustment of the sample. It relies on Orange client list in 2007, which quality is uncertain. It is also possible that market shares and penetration rate vary at finer levels than the departmental one.
+First, we still rely on the Voronoi approximation to estimate population counts. When a phone event is localized in a given Voronoi polygon, the use of prior information on tiles will just ensure that it is projected on the grid in a relevant way, i.e. by taking into account unequal probabilities of nightly presence on the territory. However, the event remains bound to be allocated to tiles which belong to or intersect the Voronoi polygon, whereas it is entirely possible that the user is actually localized in another Voronoi polygon. This shortcoming alone could constitutes a major source of the misallocations observed in urban areas. In rural areas, where antennae distribution is very sparse and thus Voronoi polygons much wider than average, the Voronoi approximation seems more justified : in such configuration, antenna cells tend to be macro cells (i.e. cells covering very wide areas, often in a circular way) and thus the approximation can actually fit technical reality. On the contrary, it doesn't appear justified in urban areas : as evident from figure \@ref(fig:voronoi2007), Voronoi polygons are much smaller in urban reas, and are even often smaller than grid tiles in centers of major cities. In this case, the Voronoi approximation produces substantial bias since it doesn't account for overlapping of antennae coverage areas. Besides, adding prior information on land use doesn't make any change because of low number of tiles per Voronoi polygons, and the fact that housing tends to be uniformly distributed in dense areas. Availability of antennae coverage maps based on waves propagation models from the MNO could highly mitigate this source of error.
 
 <!-- -------------------------------------------------------------------------- -->
 
 \newgeometry{left=5mm, right=5mm}
-\begin{figure}[t]
+\begin{figure}[h]
 \caption{Comparison of prior effect in rural and urban areas}
 \label{fig:comparzooms2007}
 \centering
@@ -422,5 +408,10 @@ Finally, some limitations associated to the data sources we exploit might explai
 \restoregeometry
 
 <!-- -------------------------------------------------------------------------- -->
+
+Another potential explanation for these errors could be that the concept of present population we measure is not the same over the territory. Urban areas are characterized by distinctive behaviours : tourism, the importance of social activities (restaurants, movies theaters, ...), different working hours, etc. As a result, the time window to which we restrict the sample of mobile phone events (19:00 to 09:00) — chosen so as to provide information regarding places of residence, while at the same time ensuring sufficient nightly observations because of tracks temporal scarcity — might capture more events which interfere with home detection than in rural areas. A careful examination of overestimation areas in major French cities gives weight to this hypothesis : overestimation particularly occurs in places known to be highly touristic (historical city centers, commercial areas, places with a lot of hotels...) as well as in transport key points (railway stations, airports). The land use prior fails to mitigate this type of errors because these areas are generally residential, and transport key points are classified in BD Topo "Bâti indifférencié" type because of their public nature. This analysis suggests that some of the differences between estimates and validation data in urban areas may not be errors, but simply due to measuring temporarily present population rather than nightly residing one. The much greater temporal resolution of tracks from signalling data could help optimize time span restriction.
+
+Finally, some limitations associated to the data sources we exploit might explain observed differences in a more general way. For availability reasons, we are constrained to deal with data sources observed at different temporality — 2007 for mobile phone data, 2011 for localized tax data, and 2015 for BD Topo. We thus make the hypothesis that evolutions are not meaningful enough to produce significant bias. Besides, some differences might be produced by the statistical adjustment of the sample. It relies on Orange client list in 2007, which quality is uncertain. It is also possible that market shares and penetration rate vary at finer levels than the departmental one.
+
 
 

@@ -4,7 +4,6 @@ output:
     includes:
       before_body: sections/0_cover.sty
       in_header: import.sty
-      after_body: sections/6_appendices.sty
     toc: true
     toc_depth: 2
     number_sections: true
@@ -12,6 +11,8 @@ fontsize: 12
 bibliography: "sections/biblio.bibtex"
 nocite: '@*'
 ---
+
+
 
 ```{r test-main, child = 'sections/1_introduction.Rmd'}
 ```
@@ -22,10 +23,7 @@ nocite: '@*'
 ```{r test-main, child = 'sections/3_orange2007.Rmd'}
 ```
 
-```{r test-main, child = 'sections/4_orange2019.Rmd'}
-```
-
-```{r test-main, child = 'sections/5_conclusion.Rmd'}
+```{r test-main, child = 'sections/4_conclusion.Rmd'}
 ```
 
 # References
