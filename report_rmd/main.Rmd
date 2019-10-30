@@ -4,6 +4,7 @@ output:
     includes:
       before_body: sections/0_cover.sty
       in_header: import.sty
+      after_body: sections/5_appendices.sty
     toc: true
     toc_depth: 2
     number_sections: true
@@ -27,4 +28,3 @@ nocite: '@*'
 ```
 
 # References
-

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.13)  30 OCT 2019 13:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.13)  30 OCT 2019 14:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1193,6 +1193,50 @@ Package: authblk 2001/02/27 1.3 (PWD)
 \c@Maxaffil=\count303
 \c@authors=\count304
 \c@affil=\count305
+) (/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2017/10/31 v0.5l Insert pages of external PDF documents (AM)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count306
+\calc@Bcount=\count307
+\calc@Adimen=\dimen194
+\calc@Bdimen=\dimen195
+\calc@Askip=\skip74
+\calc@Bskip=\skip75
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count308
+\calc@Cskip=\skip76
+) (/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+))
+\AM@pagewidth=\dimen196
+\AM@pageheight=\dimen197
+(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2017/10/31 v0.5l Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box55
+\AM@global@opts=\toks27
+\AM@toc@title=\toks28
+\c@AM@survey=\count309
+\AM@templatesizebox=\box56
 )
 
 LaTeX Warning: Unused global option(s):
@@ -1201,33 +1245,33 @@ LaTeX Warning: Unused global option(s):
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 98.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 98.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 99.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 99.
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 98.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 99.
 (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Info: Redefining \microtypecontext on input line 98.
+LaTeX Info: Redefining \microtypecontext on input line 99.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
@@ -1275,35 +1319,35 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box55
-Package hyperref Info: Link coloring OFF on input line 98.
+\AtBeginShipoutBox=\box57
+Package hyperref Info: Link coloring OFF on input line 99.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count306
+\c@section@level=\count310
 )
-LaTeX Info: Redefining \ref on input line 98.
-LaTeX Info: Redefining \pageref on input line 98.
-LaTeX Info: Redefining \nameref on input line 98.
+LaTeX Info: Redefining \ref on input line 99.
+LaTeX Info: Redefining \pageref on input line 99.
+LaTeX Info: Redefining \nameref on input line 99.
 (./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count307
-\scratchdimen=\dimen194
-\scratchbox=\box56
-\nofMPsegments=\count308
-\nofMParguments=\count309
-\everyMPshowfont=\toks27
-\MPscratchCnt=\count310
-\MPscratchDim=\dimen195
-\MPnumerator=\count311
-\makeMPintoPDFobject=\count312
-\everyMPtoPDFconversion=\toks28
+\scratchcounter=\count311
+\scratchdimen=\dimen198
+\scratchbox=\box58
+\nofMPsegments=\count312
+\nofMParguments=\count313
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count314
+\MPscratchDim=\dimen199
+\MPnumerator=\count315
+\makeMPintoPDFobject=\count316
+\everyMPtoPDFconversion=\toks30
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
@@ -1328,45 +1372,51 @@ Package caption Info: End \AtBeginDocument code.
 Dictionary: translator-basic-dictionary, Language: English 
 ) (/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
 File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/pdflscape.sty
+Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
-\c__siunitx_mathsf_int=\count313
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 98.
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)
+\c__siunitx_mathsf_int=\count317
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 99.
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 98.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 99.
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 98.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 99.
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 98.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 99.
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 98.
+(Font)              <10> on input line 99.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 98.
+(Font)              <7> on input line 99.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 98.
-LaTeX Font Info:    Try loading font information for U+msa on input line 98.
+(Font)              <5> on input line 99.
+LaTeX Font Info:    Try loading font information for U+msa on input line 99.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 98.
+LaTeX Font Info:    Try loading font information for U+msb on input line 99.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Try loading font information for OT1+lmss on input line 98.
+LaTeX Font Info:    Try loading font information for OT1+lmss on input line 99.
 
 (/usr/share/texmf/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1375,8 +1425,8 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-\c__siunitx_mathtt_int=\count314
-LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 98.
+\c__siunitx_mathtt_int=\count318
+LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 99.
 
 (/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1385,7 +1435,7 @@ Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
 
-Overfull \hbox (3.79672pt too wide) in paragraph at lines 152--153
+Overfull \hbox (3.79672pt too wide) in paragraph at lines 153--154
  []\T1/lmr/m/n/17.28 Montrouge 
  []
 
@@ -1399,118 +1449,118 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.193 
+l.192 
        [1] [2]
-<sections/2_framework/voronoi_france_2007.jpg, id=87, 1156.32pt x 817.55438pt>
+<sections/2_framework/voronoi_france_2007.jpg, id=97, 1156.32pt x 817.55438pt>
 File: sections/2_framework/voronoi_france_2007.jpg Graphic file (type jpg)
 <use sections/2_framework/voronoi_france_2007.jpg>
 Package pdftex.def Info: sections/2_framework/voronoi_france_2007.jpg  used on 
-input line 212.
+input line 213.
 (pdftex.def)             Requested size: 422.76788pt x 298.91011pt.
-<sections/2_framework/spatial_mapping.png, id=90, 656.4525pt x 297.11pt>
+<sections/2_framework/spatial_mapping.png, id=100, 656.4525pt x 297.11pt>
 File: sections/2_framework/spatial_mapping.png Graphic file (type png)
 <use sections/2_framework/spatial_mapping.png>
 Package pdftex.def Info: sections/2_framework/spatial_mapping.png  used on inpu
-t line 225.
+t line 226.
 (pdftex.def)             Requested size: 375.8045pt x 170.08888pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 237.
+(Font)              <12> on input line 238.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 237.
+(Font)              <8> on input line 238.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 237.
+(Font)              <6> on input line 238.
 [3] [4 <./sections/2_framework/voronoi_france_2007.jpg> <./sections/2_framework
 /spatial_mapping.png (PNG copy)>]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 246.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 247.
 
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [5]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 265.
+               Default added (so using `tbp') on input line 266.
 
-<sections/3_orange2007/stats_desc_daily_events.jpg, id=126, 377.91188pt x 268.7
+<sections/3_orange2007/stats_desc_daily_events.jpg, id=134, 377.91188pt x 268.7
 5406pt>
 File: sections/3_orange2007/stats_desc_daily_events.jpg Graphic file (type jpg)
 
 <use sections/3_orange2007/stats_desc_daily_events.jpg>
 Package pdftex.def Info: sections/3_orange2007/stats_desc_daily_events.jpg  use
-d on input line 285.
+d on input line 286.
 (pdftex.def)             Requested size: 206.69312pt x 146.9909pt.
-<sections/3_orange2007/stats_desc_nb_distinct_days.jpg, id=127, 379.4175pt x 26
+<sections/3_orange2007/stats_desc_nb_distinct_days.jpg, id=135, 379.4175pt x 26
 8.75406pt>
 File: sections/3_orange2007/stats_desc_nb_distinct_days.jpg Graphic file (type 
 jpg)
 <use sections/3_orange2007/stats_desc_nb_distinct_days.jpg>
 Package pdftex.def Info: sections/3_orange2007/stats_desc_nb_distinct_days.jpg 
- used on input line 288.
+ used on input line 289.
 (pdftex.def)             Requested size: 206.69449pt x 146.40858pt.
 [6]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 297.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 298.
 
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [7 <./sections/3_orange2007/stats_desc_daily_events.jpg> <./sections/3_orange
 2007/stats_desc_nb_distinct_days.jpg>] [8]
-<sections/3_orange2007/ex_voronoi_to_grid/voro1.png, id=165, 505.89pt x 433.62p
+<sections/3_orange2007/ex_voronoi_to_grid/voro1.png, id=173, 505.89pt x 433.62p
 t>
 File: sections/3_orange2007/ex_voronoi_to_grid/voro1.png Graphic file (type png
 )
 <use sections/3_orange2007/ex_voronoi_to_grid/voro1.png>
 Package pdftex.def Info: sections/3_orange2007/ex_voronoi_to_grid/voro1.png  us
-ed on input line 354.
+ed on input line 355.
 (pdftex.def)             Requested size: 140.93033pt x 120.79744pt.
-<sections/3_orange2007/ex_voronoi_to_grid/voro2.png, id=166, 505.89pt x 433.62p
+<sections/3_orange2007/ex_voronoi_to_grid/voro2.png, id=174, 505.89pt x 433.62p
 t>
 File: sections/3_orange2007/ex_voronoi_to_grid/voro2.png Graphic file (type png
 )
 <use sections/3_orange2007/ex_voronoi_to_grid/voro2.png>
 Package pdftex.def Info: sections/3_orange2007/ex_voronoi_to_grid/voro2.png  us
-ed on input line 357.
+ed on input line 358.
 (pdftex.def)             Requested size: 140.93033pt x 120.79744pt.
-<sections/3_orange2007/ex_voronoi_to_grid/grid1.png, id=167, 505.89pt x 433.62p
+<sections/3_orange2007/ex_voronoi_to_grid/grid1.png, id=175, 505.89pt x 433.62p
 t>
 File: sections/3_orange2007/ex_voronoi_to_grid/grid1.png Graphic file (type png
 )
 <use sections/3_orange2007/ex_voronoi_to_grid/grid1.png>
 Package pdftex.def Info: sections/3_orange2007/ex_voronoi_to_grid/grid1.png  us
-ed on input line 360.
+ed on input line 361.
 (pdftex.def)             Requested size: 131.52829pt x 112.73854pt.
-<sections/3_orange2007/ex_voronoi_to_grid/grid2.png, id=168, 505.89pt x 433.62p
+<sections/3_orange2007/ex_voronoi_to_grid/grid2.png, id=176, 505.89pt x 433.62p
 t>
 File: sections/3_orange2007/ex_voronoi_to_grid/grid2.png Graphic file (type png
 )
 <use sections/3_orange2007/ex_voronoi_to_grid/grid2.png>
 Package pdftex.def Info: sections/3_orange2007/ex_voronoi_to_grid/grid2.png  us
-ed on input line 363.
+ed on input line 364.
 (pdftex.def)             Requested size: 131.52829pt x 112.73854pt.
-<sections/3_orange2007/ex_voronoi_to_grid/grid3.png, id=169, 505.89pt x 433.62p
+<sections/3_orange2007/ex_voronoi_to_grid/grid3.png, id=177, 505.89pt x 433.62p
 t>
 File: sections/3_orange2007/ex_voronoi_to_grid/grid3.png Graphic file (type png
 )
 <use sections/3_orange2007/ex_voronoi_to_grid/grid3.png>
 Package pdftex.def Info: sections/3_orange2007/ex_voronoi_to_grid/grid3.png  us
-ed on input line 366.
+ed on input line 367.
 (pdftex.def)             Requested size: 131.52829pt x 112.73854pt.
-<sections/3_orange2007/ex_voronoi_to_grid/prior1.png, id=170, 505.89pt x 433.62
+<sections/3_orange2007/ex_voronoi_to_grid/prior1.png, id=178, 505.89pt x 433.62
 pt>
 File: sections/3_orange2007/ex_voronoi_to_grid/prior1.png Graphic file (type pn
 g)
 <use sections/3_orange2007/ex_voronoi_to_grid/prior1.png>
 Package pdftex.def Info: sections/3_orange2007/ex_voronoi_to_grid/prior1.png  u
-sed on input line 369.
+sed on input line 370.
 (pdftex.def)             Requested size: 140.93033pt x 120.79744pt.
-<sections/3_orange2007/ex_voronoi_to_grid/prior2.png, id=171, 505.89pt x 433.62
+<sections/3_orange2007/ex_voronoi_to_grid/prior2.png, id=179, 505.89pt x 433.62
 pt>
 File: sections/3_orange2007/ex_voronoi_to_grid/prior2.png Graphic file (type pn
 g)
 <use sections/3_orange2007/ex_voronoi_to_grid/prior2.png>
 Package pdftex.def Info: sections/3_orange2007/ex_voronoi_to_grid/prior2.png  u
-sed on input line 372.
+sed on input line 373.
 (pdftex.def)             Requested size: 140.93033pt x 120.79744pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 375.
+(Font)              <9> on input line 376.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1553,142 +1603,139 @@ PNG copy)> <./sections/3_orange2007/ex_voronoi_to_grid/prior1.png (PNG copy)> <
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<sections/3_orange2007/phd_uniform.png, id=240, 284.5029pt x 284.5029pt>
+<sections/3_orange2007/phd_uniform.png, id=257, 284.5029pt x 284.5029pt>
 File: sections/3_orange2007/phd_uniform.png Graphic file (type png)
 <use sections/3_orange2007/phd_uniform.png>
 Package pdftex.def Info: sections/3_orange2007/phd_uniform.png  used on input l
-ine 468.
+ine 473.
 (pdftex.def)             Requested size: 227.61998pt x 227.61998pt.
-<sections/3_orange2007/phd_bdtopo.png, id=242, 284.5029pt x 284.5029pt>
+<sections/3_orange2007/phd_bdtopo.png, id=259, 284.5029pt x 284.5029pt>
 File: sections/3_orange2007/phd_bdtopo.png Graphic file (type png)
 <use sections/3_orange2007/phd_bdtopo.png>
 Package pdftex.def Info: sections/3_orange2007/phd_bdtopo.png  used on input li
-ne 471.
+ne 476.
 (pdftex.def)             Requested size: 227.61998pt x 227.61998pt.
-<sections/3_orange2007/rfl.png, id=243, 284.5029pt x 284.5029pt>
+<sections/3_orange2007/rfl.png, id=260, 284.5029pt x 284.5029pt>
 File: sections/3_orange2007/rfl.png Graphic file (type png)
 <use sections/3_orange2007/rfl.png>
-Package pdftex.def Info: sections/3_orange2007/rfl.png  used on input line 474.
+Package pdftex.def Info: sections/3_orange2007/rfl.png  used on input line 479.
 
 (pdftex.def)             Requested size: 227.61998pt x 227.61998pt.
-<sections/3_orange2007/diff_uniform_rfl.png, id=244, 304.2567pt x 284.5029pt>
+<sections/3_orange2007/diff_uniform_rfl.png, id=261, 304.2567pt x 284.5029pt>
 File: sections/3_orange2007/diff_uniform_rfl.png Graphic file (type png)
 <use sections/3_orange2007/diff_uniform_rfl.png>
 Package pdftex.def Info: sections/3_orange2007/diff_uniform_rfl.png  used on in
-put line 477.
+put line 482.
 (pdftex.def)             Requested size: 227.62556pt x 212.84702pt.
-<sections/3_orange2007/diff_bdtopo_rfl.png, id=245, 304.2567pt x 284.5029pt>
+<sections/3_orange2007/diff_bdtopo_rfl.png, id=262, 304.2567pt x 284.5029pt>
 File: sections/3_orange2007/diff_bdtopo_rfl.png Graphic file (type png)
 <use sections/3_orange2007/diff_bdtopo_rfl.png>
 Package pdftex.def Info: sections/3_orange2007/diff_bdtopo_rfl.png  used on inp
-ut line 480.
+ut line 485.
 (pdftex.def)             Requested size: 227.62556pt x 212.84702pt.
 
-LaTeX Warning: Float too large for page by 6.19467pt on input line 482.
+LaTeX Warning: Float too large for page by 6.19467pt on input line 487.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 [16 <./sections/3_orange2007/phd_uniform.png> <./sections/3_orange2007/phd_bdto
 po.png> <./sections/3_orange2007/rfl.png> <./sections/3_orange2007/diff_uniform
 _rfl.png> <./sections/3_orange2007/diff_bdtopo_rfl.png>]
-Overfull \hbox (5.0pt too wide) detected at line 501
+Overfull \hbox (5.0pt too wide) detected at line 504
  
  []
 
 
-Overfull \hbox (5.0pt too wide) detected at line 501
+Overfull \hbox (5.0pt too wide) detected at line 504
  
  []
 
 
-Overfull \hbox (5.0pt too wide) detected at line 502
+Overfull \hbox (5.0pt too wide) detected at line 505
  
  []
 
 
-Overfull \hbox (5.0pt too wide) detected at line 502
+Overfull \hbox (5.0pt too wide) detected at line 505
  
  []
 
 
-Overfull \hbox (5.0pt too wide) detected at line 502
+Overfull \hbox (5.0pt too wide) detected at line 505
  
  []
 
-<sections/3_orange2007/scatter_uniform_rfl.png, id=268, 634.62094pt x 228.855pt
+<sections/3_orange2007/scatter_uniform_rfl.png, id=279, 634.62094pt x 228.855pt
 >
 File: sections/3_orange2007/scatter_uniform_rfl.png Graphic file (type png)
 <use sections/3_orange2007/scatter_uniform_rfl.png>
 Package pdftex.def Info: sections/3_orange2007/scatter_uniform_rfl.png  used on
- input line 513.
+ input line 516.
 (pdftex.def)             Requested size: 469.76707pt x 169.40591pt.
 
-Overfull \hbox (3.34538pt too wide) in paragraph at lines 513--514
+Overfull \hbox (3.34538pt too wide) in paragraph at lines 516--517
  [][] 
  []
 
-<sections/3_orange2007/scatter_bdtopo_rfl.png, id=269, 638.385pt x 231.11343pt>
+<sections/3_orange2007/scatter_bdtopo_rfl.png, id=280, 638.385pt x 231.11343pt>
 
 File: sections/3_orange2007/scatter_bdtopo_rfl.png Graphic file (type png)
 <use sections/3_orange2007/scatter_bdtopo_rfl.png>
 Package pdftex.def Info: sections/3_orange2007/scatter_bdtopo_rfl.png  used on 
-input line 516.
+input line 519.
 (pdftex.def)             Requested size: 469.75769pt x 170.06558pt.
 
-Overfull \hbox (3.336pt too wide) in paragraph at lines 516--517
+Overfull \hbox (3.336pt too wide) in paragraph at lines 519--520
  [][] 
  []
 
-[17
-
-
-]
-<sections/3_orange2007/compar_overpop_PHD.jpg, id=280, 335.00156pt x 280.04625p
+<sections/3_orange2007/compar_overpop_PHD.jpg, id=283, 335.00156pt x 280.04625p
 t>
 File: sections/3_orange2007/compar_overpop_PHD.jpg Graphic file (type jpg)
 <use sections/3_orange2007/compar_overpop_PHD.jpg>
 Package pdftex.def Info: sections/3_orange2007/compar_overpop_PHD.jpg  used on 
-input line 528.
+input line 531.
 (pdftex.def)             Requested size: 201.98903pt x 168.85374pt.
-<sections/3_orange2007/compar_empty_PHD.jpg, id=281, 337.26pt x 279.29344pt>
+<sections/3_orange2007/compar_empty_PHD.jpg, id=284, 337.26pt x 279.29344pt>
 File: sections/3_orange2007/compar_empty_PHD.jpg Graphic file (type jpg)
 <use sections/3_orange2007/compar_empty_PHD.jpg>
 Package pdftex.def Info: sections/3_orange2007/compar_empty_PHD.jpg  used on in
-put line 531.
+put line 534.
 (pdftex.def)             Requested size: 201.99217pt x 167.27477pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[18]
-<sections/3_orange2007/scale_diff_analysis.png, id=296, 714.41907pt x 337.26pt>
+[17
+
+
+] [18 <./sections/3_orange2007/scatter_uniform_rfl.png> <./sections/3_orange200
+7/scatter_bdtopo_rfl.png>] [19 <./sections/3_orange2007/compar_overpop_PHD.jpg>
+ <./sections/3_orange2007/compar_empty_PHD.jpg>]
+<sections/3_orange2007/scale_diff_analysis.png, id=316, 714.41907pt x 337.26pt>
 
 File: sections/3_orange2007/scale_diff_analysis.png Graphic file (type png)
 <use sections/3_orange2007/scale_diff_analysis.png>
 Package pdftex.def Info: sections/3_orange2007/scale_diff_analysis.png  used on
- input line 565.
+ input line 568.
 (pdftex.def)             Requested size: 421.90694pt x 199.17207pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[19 <./sections/3_orange2007/scatter_uniform_rfl.png> <./sections/3_orange2007/
-scatter_bdtopo_rfl.png>]
-<sections/3_orange2007/diff_mae_dep.png, id=308, 284.5029pt x 284.5029pt>
+<sections/3_orange2007/diff_mae_dep.png, id=318, 284.5029pt x 284.5029pt>
 File: sections/3_orange2007/diff_mae_dep.png Graphic file (type png)
 <use sections/3_orange2007/diff_mae_dep.png>
 Package pdftex.def Info: sections/3_orange2007/diff_mae_dep.png  used on input 
-line 576.
+line 579.
 (pdftex.def)             Requested size: 201.98978pt x 201.98978pt.
-<sections/3_orange2007/diff_rmse_dep.png, id=309, 284.5029pt x 284.5029pt>
+<sections/3_orange2007/diff_rmse_dep.png, id=319, 284.5029pt x 284.5029pt>
 File: sections/3_orange2007/diff_rmse_dep.png Graphic file (type png)
 <use sections/3_orange2007/diff_rmse_dep.png>
 Package pdftex.def Info: sections/3_orange2007/diff_rmse_dep.png  used on input
- line 579.
+ line 582.
 (pdftex.def)             Requested size: 201.98978pt x 201.98978pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[20 <./sections/3_orange2007/compar_overpop_PHD.jpg> <./sections/3_orange2007/c
-ompar_empty_PHD.jpg>] [21 <./sections/3_orange2007/scale_diff_analysis.png>] [2
-2 <./sections/3_orange2007/diff_mae_dep.png> <./sections/3_orange2007/diff_rmse
-_dep.png>]
+[20 <./sections/3_orange2007/scale_diff_analysis.png>] [21 <./sections/3_orange
+2007/diff_mae_dep.png> <./sections/3_orange2007/diff_rmse_dep.png>] [22]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: <default>
@@ -1721,37 +1768,37 @@ _dep.png>]
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<sections/3_orange2007/diff_uniform_meuse.png, id=336, 343.2825pt x 463.7325pt>
+<sections/3_orange2007/diff_uniform_meuse.png, id=344, 343.2825pt x 463.7325pt>
 
 File: sections/3_orange2007/diff_uniform_meuse.png Graphic file (type png)
 <use sections/3_orange2007/diff_uniform_meuse.png>
 Package pdftex.def Info: sections/3_orange2007/diff_uniform_meuse.png  used on 
-input line 599.
+input line 606.
 (pdftex.def)             Requested size: 189.56546pt x 256.07967pt.
-<sections/3_orange2007/diff_bdtopo_meuse.png, id=337, 342.5297pt x 463.7325pt>
+<sections/3_orange2007/diff_bdtopo_meuse.png, id=345, 342.5297pt x 463.7325pt>
 File: sections/3_orange2007/diff_bdtopo_meuse.png Graphic file (type png)
 <use sections/3_orange2007/diff_bdtopo_meuse.png>
 Package pdftex.def Info: sections/3_orange2007/diff_bdtopo_meuse.png  used on i
-nput line 602.
+nput line 609.
 (pdftex.def)             Requested size: 189.14977pt x 256.07967pt.
-<sections/3_orange2007/diff_uniform_paris_lisse.png, id=338, 456.20438pt x 413.
+<sections/3_orange2007/diff_uniform_paris_lisse.png, id=346, 456.20438pt x 413.
 29407pt>
 File: sections/3_orange2007/diff_uniform_paris_lisse.png Graphic file (type png
 )
 <use sections/3_orange2007/diff_uniform_paris_lisse.png>
 Package pdftex.def Info: sections/3_orange2007/diff_uniform_paris_lisse.png  us
-ed on input line 605.
+ed on input line 612.
 (pdftex.def)             Requested size: 251.26123pt x 227.62775pt.
-<sections/3_orange2007/diff_bdtopo_paris_lisse.png, id=339, 457.71pt x 415.5525
+<sections/3_orange2007/diff_bdtopo_paris_lisse.png, id=347, 457.71pt x 415.5525
 pt>
 File: sections/3_orange2007/diff_bdtopo_paris_lisse.png Graphic file (type png)
 
 <use sections/3_orange2007/diff_bdtopo_paris_lisse.png>
 Package pdftex.def Info: sections/3_orange2007/diff_bdtopo_paris_lisse.png  use
-d on input line 608.
+d on input line 615.
 (pdftex.def)             Requested size: 250.71461pt x 227.62248pt.
 
-LaTeX Warning: Float too large for page by 28.73082pt on input line 610.
+LaTeX Warning: Float too large for page by 28.73082pt on input line 617.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1761,49 +1808,246 @@ iff_bdtopo_meuse.png> <./sections/3_orange2007/diff_uniform_paris_lisse.png> <.
 /sections/3_orange2007/diff_bdtopo_paris_lisse.png>] [24
 
 
-] [25] [26]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 727.
-[27]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 727.
+] [25]
+<sections/4_appendixA/doc_package.pdf, id=395, 614.295pt x 794.97pt>
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf  used on input li
+ne 737.
+(pdftex.def)             Requested size: 469.75604pt x 607.9196pt.
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf  used on input li
+ne 737.
+(pdftex.def)             Requested size: 469.75604pt x 607.9196pt.
+<sections/4_appendixA/doc_package.pdf, id=398, page=1, 614.295pt x 794.97pt>
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 1>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page1 used on i
+nput line 737.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 1>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page1 used on i
+nput line 737.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+[26]
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 1>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page1 used on i
+nput line 737.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 1>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page1 used on i
+nput line 737.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 1>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page1 used on i
+nput line 737.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+[27 <./sections/4_appendixA/doc_package.pdf>]
+<sections/4_appendixA/doc_package.pdf, id=434, page=2, 614.295pt x 794.97pt>
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 2>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page2 used on i
+nput line 737.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 2>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page2 used on i
+nput line 737.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 2>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page2 used on i
+nput line 737.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+[28 <./sections/4_appendixA/doc_package.pdf>]
+<sections/4_appendixA/doc_package.pdf, id=455, page=3, 614.295pt x 794.97pt>
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 3>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page3 used on i
+nput line 737.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 3>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page3 used on i
+nput line 737.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 3>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page3 used on i
+nput line 737.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+[29 <./sections/4_appendixA/doc_package.pdf>]
+<sections/4_appendixA/doc_package.pdf, id=460, page=4, 614.295pt x 794.97pt>
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 4>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page4 used on i
+nput line 737.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 4>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page4 used on i
+nput line 737.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 4>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page4 used on i
+nput line 737.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+[30 <./sections/4_appendixA/doc_package.pdf>]
+<sections/4_appendixA/doc_package.pdf, id=466, page=5, 614.295pt x 794.97pt>
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 5>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page5 used on i
+nput line 737.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 5>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page5 used on i
+nput line 737.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 5>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page5 used on i
+nput line 737.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+[31 <./sections/4_appendixA/doc_package.pdf>]
+<sections/4_appendixA/doc_package.pdf, id=471, page=6, 614.295pt x 794.97pt>
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 6>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page6 used on i
+nput line 737.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 6>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page6 used on i
+nput line 737.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 6>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page6 used on i
+nput line 737.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+[32 <./sections/4_appendixA/doc_package.pdf>]
+<sections/4_appendixA/doc_package.pdf, id=476, page=7, 614.295pt x 794.97pt>
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 7>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page7 used on i
+nput line 737.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 7>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page7 used on i
+nput line 737.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 7>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page7 used on i
+nput line 737.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+[33 <./sections/4_appendixA/doc_package.pdf>]
+<sections/4_appendixA/doc_package.pdf, id=481, page=8, 614.295pt x 794.97pt>
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 8>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page8 used on i
+nput line 737.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 8>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page8 used on i
+nput line 737.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 8>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page8 used on i
+nput line 737.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+[34 <./sections/4_appendixA/doc_package.pdf>]
+<sections/4_appendixA/doc_package.pdf, id=486, page=9, 614.295pt x 794.97pt>
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 9>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page9 used on i
+nput line 737.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 9>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page9 used on i
+nput line 737.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 9>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page9 used on i
+nput line 737.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+[35 <./sections/4_appendixA/doc_package.pdf>]
+<sections/4_appendixA/doc_package.pdf, id=491, page=10, 614.295pt x 794.97pt>
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 10>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page10 used on 
+input line 737.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 10>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page10 used on 
+input line 737.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 10>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page10 used on 
+input line 737.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+[36 <./sections/4_appendixA/doc_package.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 740.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 740.
 (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 727.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 727.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 740.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 740.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 2D2A47A40D5341F9370648C862CA2925;2468.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 727.
+(rerunfilecheck)             Checksum: 0883E11933FA37D7C9FF6AE0E3159227;2668.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 740.
  ) 
 Here is how much of TeX's memory you used:
- 24948 strings out of 492982
- 453960 string characters out of 6134896
- 504258 words of memory out of 5000000
- 27892 multiletter control sequences out of 15000+600000
+ 26162 strings out of 492982
+ 472356 string characters out of 6134896
+ 531274 words of memory out of 5000000
+ 29066 multiletter control sequences out of 15000+600000
  649664 words of font info for 196 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,14n,49p,10383b,772s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,18n,49p,10383b,862s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/en
 c/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/u
 sr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/l
-m/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texmf/f
-onts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.
-pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/
-type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb><
-/usr/share/texmf/fonts/type1/public/lm/lmmi5.pfb></usr/share/texmf/fonts/type1/
-public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi7.pfb></usr/sha
-re/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/l
-m/lmmi9.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf
-/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.
-pfb></usr/share/texmf/fonts/type1/public/lm/lmr5.pfb></usr/share/texmf/fonts/ty
-pe1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/s
-hare/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/
-lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texm
-f/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy
-10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/share/texmf/font
-s/type1/public/lm/lmsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (28 pages, 5615627 bytes).
+m/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texlive
+/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/share/tex
+mf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmb
+x12.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fo
+nts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.p
+fb></usr/share/texmf/fonts/type1/public/lm/lmmi5.pfb></usr/share/texmf/fonts/ty
+pe1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi7.pfb></usr
+/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/publ
+ic/lm/lmmi9.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/t
+exmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lm
+r17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr5.pfb></usr/share/texmf/font
+s/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></u
+sr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/pub
+lic/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/
+texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/
+lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/share/texmf/
+fonts/type1/public/lm/lmsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/u
+tmri8a.pfb>
+Output written on main.pdf (37 pages, 5714040 bytes).
 PDF statistics:
- 531 PDF objects out of 1000 (max. 8388607)
- 429 compressed objects within 5 object streams
- 149 named destinations out of 1000 (max. 500000)
- 28904 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 632 PDF objects out of 1000 (max. 8388607)
+ 501 compressed objects within 6 object streams
+ 159 named destinations out of 1000 (max. 500000)
+ 28985 words of extra memory for PDF output out of 29859 (max. 10000000)
 
