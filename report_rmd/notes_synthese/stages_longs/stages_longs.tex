@@ -48,25 +48,44 @@ Le problème de recherche est identique à celui du stage d'application : la loc
 
 \subsection{Méthodologie}
 
+Nous mobilisons à nouveau le modèle de localisation des évènements mobiles proposé par Tennekes (2018) : \begin{center}
 
+\begingroup
+\large
+$\mathbb{P}(carreau_i | antenne_j) \propto \mathbb{P}(carreau_i) \mathbb{P}(antenne_j | carreau_i)$
+\endgroup
+\end{center}
+
+Nous modifions cependant le terme de vraisemblance $\mathbb{P}(antenne_j | carreau_i)$, qui correspond de fait à la modélisation de la couverture des antennes, afin de tenir compte de l'information technique additionnelle dont nous disposons sur la couverture théorique des antennes. Cette modification témoigne d'une force majeur du modèle bayésien de localisation : il permet de couvrir un large éventail de situations en termes de données disponibles, aussi bien sur la couverture des antennes que pour incorporer de l'information \textit{a priori} sur la grille.
 
 \subsection{Données}
 
-\textit{signalling} (i.e. non plus seulement des données actives -- appels et SMS -- mais également passives -- connexions fréquentes du mobile aux antennes sans action de l'usager).
+Nous disposons d'un jeu de données de \textit{signalling} (i.e. non plus seulement des données actives -- appels et SMS -- mais également passives -- connexions fréquentes du mobile aux antennes sans action de l'usager) couvrant l'intégralité des clients d'Orange. Ces données présentent une profondeur temporelle largement plus importante que celles utilisées lors du stage d'application. Les cartes de couverture théorique des antennes sont également fournies par Orange.
 
 \subsection{Résultats}
+
+La courte durée du stage n'a pas permis de produire de résultats finaux concernant la population présente. De nombreux problèmes computationnels se sont posés : du fait de leur profondeur temporelle considérable, les données de \textit{signalling} utilisées représentent un volume d'environ 1To par jour, ce qui rend très délicat leur exploitation, même en utilisant des outils de calcul distribué adaptés (Spark sur une infrastructure HDFS). Le stage a cependant permis de décrire statistiquement ces données -- qui n'ont jamais été exploitées auparavant -- ainsi que de coder les scripts informatiques nécessaires à de futures estimations de population présente.
 
 \section{Stage à Foundamental (Berlin), 11/06/19 - 06/09/19}
 
 \subsection{Contexte}
 
+Ce stage a été réalisé à Foundamental (Berlin), un fonds de \textit{venture capital} qui investit dans des \textit{startups} innovantes dans le domaine de la construction. Il a été supervisé par Clemens Meyer zu Rheda, qui est \textit{data scientist} à Foundamental. Ce stage a été l'occasion pour moi de réaliser d'une part une expérience dans une équipe internationale, et d'autre part de découvrir un milieu professionnel très différent de ceux de mes précédentes expériences (statistique publique ou laboratoires de recherche).
+
 \subsection{Problème de recherche}
+
+L'équipe chargée de la \textit{data science} vise à développer des processus permettant de simplifier et de rendre plus efficient le travail des investisseurs, à toutes les étapes du processus de décision de l'entreprise. Dans ce cadre, le principal projet sur lequel j'ai travaillé consistait à détecter la similarité entre \textit{startups} sur la seule base de leur description. L'objectif de ce projet est de pouvoir détecter les potentiels concurrents d'une entreprise dans laquelle Foundamental investit, ce qui est un facteur essentiel dans la décision d'investissement. 
 
 \subsection{Méthodologie}
 
+Comme indiqué précédemment, les seules données disponibles pour procéder à la détection de similarité étaient des descriptions plus ou moins détaillées de \textit{startups}. Le problème se ramenait donc à une application classique de \textit{Natural Language Processing} (NLP) visant à détecter la similarité sémantique entre des textes de longueur inégale par le biais d'outils statistiques. Une des questions majeures a été de trouver le meilleur \textit{embedding}, i.e. la meilleure manière de représenter vectoriellement le texte afin de procéder à leur comparaison. De nombreux \textit{embeddings} ont été implémentés, des plus classiques (comptage binaire, TF-IDF, LDA) aux plus récents (word2vec, doc2vec, réseaux pré-entrainés). Une autre question importante a été de trouver la métrique appropriée pour comparer les textes une fois représentés vectoriellement. Là encore, plusieurs métriques ont été implémentées (similarisé cosine, \textit{clustering} de textes, \textit{word's mover distance}).
+
 \subsection{Données}
+
+Les descriptions des \textit{startups} provenaient de plusieurs sources : principelement de bases de données commerciales (Crunchbase, Tracxn), mais certaines étaient également issues des recherches des investisseurs.
 
 \subsection{Résultats}
 
+Les résultats de la recherche par similarité étaient mitigés. En moyenne, les meilleurs algorithmes permettaient de détecter des entreprises candidates de bonne qualité, mais le nombre de faux-positifs s'est avéré important. La principale raison de ces performances contrastées est l'importante hétérogénéité de la qualité des descriptions, qui ne permet pas de détecter systématiquement des entreprises pertinentes. Face à ce constat, j'ai proposé et implémenté une application dédiée à la détection de similarité, qui permet de visualiser rapidement à la fois la description initiale et les résultats, de modifier à la volée les paramètres importants des modèles, et donc de déterminer rapidement si l'algorithme de détection de la similarité peut s'avérer pertinent pour l'entreprise considérée.
 
 \end{document}
