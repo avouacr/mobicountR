@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.13)  30 OCT 2019 12:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.13)  31 OCT 2019 17:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1421,7 +1421,7 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 207.
 
-<sections/3_orange2007/stats_desc_daily_events.jpg, id=123, 377.91188pt x 268.7
+<sections/3_orange2007/stats_desc_daily_events.jpg, id=124, 377.91188pt x 268.7
 5406pt>
 File: sections/3_orange2007/stats_desc_daily_events.jpg Graphic file (type jpg)
 
@@ -1429,7 +1429,7 @@ File: sections/3_orange2007/stats_desc_daily_events.jpg Graphic file (type jpg)
 Package pdftex.def Info: sections/3_orange2007/stats_desc_daily_events.jpg  use
 d on input line 227.
 (pdftex.def)             Requested size: 206.69312pt x 146.9909pt.
-<sections/3_orange2007/stats_desc_nb_distinct_days.jpg, id=124, 379.4175pt x 26
+<sections/3_orange2007/stats_desc_nb_distinct_days.jpg, id=125, 379.4175pt x 26
 8.75406pt>
 File: sections/3_orange2007/stats_desc_nb_distinct_days.jpg Graphic file (type 
 jpg)
@@ -1444,43 +1444,43 @@ LaTeX Font Info:    Try loading font information for TS1+lmr on input line 239.
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [7 <./sections/3_orange2007/stats_desc_daily_events.jpg> <./sections/3_orange
 2007/stats_desc_nb_distinct_days.jpg>] [8]
-<sections/6_appendix_A/voro1.png, id=162, 505.89pt x 433.62pt>
+<sections/6_appendix_A/voro1.png, id=163, 505.89pt x 433.62pt>
 File: sections/6_appendix_A/voro1.png Graphic file (type png)
 <use sections/6_appendix_A/voro1.png>
 Package pdftex.def Info: sections/6_appendix_A/voro1.png  used on input line 29
 6.
 (pdftex.def)             Requested size: 140.93033pt x 120.79744pt.
-<sections/6_appendix_A/voro2.png, id=163, 505.89pt x 433.62pt>
+<sections/6_appendix_A/voro2.png, id=164, 505.89pt x 433.62pt>
 File: sections/6_appendix_A/voro2.png Graphic file (type png)
 <use sections/6_appendix_A/voro2.png>
 Package pdftex.def Info: sections/6_appendix_A/voro2.png  used on input line 29
 9.
 (pdftex.def)             Requested size: 140.93033pt x 120.79744pt.
-<sections/6_appendix_A/grid1.png, id=164, 505.89pt x 433.62pt>
+<sections/6_appendix_A/grid1.png, id=165, 505.89pt x 433.62pt>
 File: sections/6_appendix_A/grid1.png Graphic file (type png)
 <use sections/6_appendix_A/grid1.png>
 Package pdftex.def Info: sections/6_appendix_A/grid1.png  used on input line 30
 2.
 (pdftex.def)             Requested size: 131.52829pt x 112.73854pt.
-<sections/6_appendix_A/grid2.png, id=165, 505.89pt x 433.62pt>
+<sections/6_appendix_A/grid2.png, id=166, 505.89pt x 433.62pt>
 File: sections/6_appendix_A/grid2.png Graphic file (type png)
 <use sections/6_appendix_A/grid2.png>
 Package pdftex.def Info: sections/6_appendix_A/grid2.png  used on input line 30
 5.
 (pdftex.def)             Requested size: 131.52829pt x 112.73854pt.
-<sections/6_appendix_A/grid3.png, id=166, 505.89pt x 433.62pt>
+<sections/6_appendix_A/grid3.png, id=167, 505.89pt x 433.62pt>
 File: sections/6_appendix_A/grid3.png Graphic file (type png)
 <use sections/6_appendix_A/grid3.png>
 Package pdftex.def Info: sections/6_appendix_A/grid3.png  used on input line 30
 8.
 (pdftex.def)             Requested size: 131.52829pt x 112.73854pt.
-<sections/6_appendix_A/prior1.png, id=167, 505.89pt x 433.62pt>
+<sections/6_appendix_A/prior1.png, id=168, 505.89pt x 433.62pt>
 File: sections/6_appendix_A/prior1.png Graphic file (type png)
 <use sections/6_appendix_A/prior1.png>
 Package pdftex.def Info: sections/6_appendix_A/prior1.png  used on input line 3
 11.
 (pdftex.def)             Requested size: 140.93033pt x 120.79744pt.
-<sections/6_appendix_A/prior2.png, id=168, 505.89pt x 433.62pt>
+<sections/6_appendix_A/prior2.png, id=169, 505.89pt x 433.62pt>
 File: sections/6_appendix_A/prior2.png Graphic file (type png)
 <use sections/6_appendix_A/prior2.png>
 Package pdftex.def Info: sections/6_appendix_A/prior2.png  used on input line 3
@@ -1528,31 +1528,31 @@ ctions/6_appendix_A/prior1.png (PNG copy)> <./sections/6_appendix_A/prior2.png
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<sections/3_orange2007/phd_uniform.png, id=237, 284.5029pt x 284.5029pt>
+<sections/3_orange2007/phd_uniform.png, id=238, 284.5029pt x 284.5029pt>
 File: sections/3_orange2007/phd_uniform.png Graphic file (type png)
 <use sections/3_orange2007/phd_uniform.png>
 Package pdftex.def Info: sections/3_orange2007/phd_uniform.png  used on input l
 ine 410.
 (pdftex.def)             Requested size: 227.61998pt x 227.61998pt.
-<sections/3_orange2007/phd_bdtopo.png, id=239, 284.5029pt x 284.5029pt>
+<sections/3_orange2007/phd_bdtopo.png, id=240, 284.5029pt x 284.5029pt>
 File: sections/3_orange2007/phd_bdtopo.png Graphic file (type png)
 <use sections/3_orange2007/phd_bdtopo.png>
 Package pdftex.def Info: sections/3_orange2007/phd_bdtopo.png  used on input li
 ne 413.
 (pdftex.def)             Requested size: 227.61998pt x 227.61998pt.
-<sections/3_orange2007/rfl.png, id=240, 284.5029pt x 284.5029pt>
+<sections/3_orange2007/rfl.png, id=241, 284.5029pt x 284.5029pt>
 File: sections/3_orange2007/rfl.png Graphic file (type png)
 <use sections/3_orange2007/rfl.png>
 Package pdftex.def Info: sections/3_orange2007/rfl.png  used on input line 416.
 
 (pdftex.def)             Requested size: 227.61998pt x 227.61998pt.
-<sections/3_orange2007/diff_uniform_rfl.png, id=241, 304.2567pt x 284.5029pt>
+<sections/3_orange2007/diff_uniform_rfl.png, id=242, 304.2567pt x 284.5029pt>
 File: sections/3_orange2007/diff_uniform_rfl.png Graphic file (type png)
 <use sections/3_orange2007/diff_uniform_rfl.png>
 Package pdftex.def Info: sections/3_orange2007/diff_uniform_rfl.png  used on in
 put line 419.
 (pdftex.def)             Requested size: 227.62556pt x 212.84702pt.
-<sections/3_orange2007/diff_bdtopo_rfl.png, id=242, 304.2567pt x 284.5029pt>
+<sections/3_orange2007/diff_bdtopo_rfl.png, id=243, 304.2567pt x 284.5029pt>
 File: sections/3_orange2007/diff_bdtopo_rfl.png Graphic file (type png)
 <use sections/3_orange2007/diff_bdtopo_rfl.png>
 Package pdftex.def Info: sections/3_orange2007/diff_bdtopo_rfl.png  used on inp
@@ -1588,7 +1588,7 @@ Overfull \hbox (5.0pt too wide) detected at line 444
  
  []
 
-<sections/3_orange2007/scatter_uniform_rfl.png, id=265, 634.62094pt x 228.855pt
+<sections/3_orange2007/scatter_uniform_rfl.png, id=266, 634.62094pt x 228.855pt
 >
 File: sections/3_orange2007/scatter_uniform_rfl.png Graphic file (type png)
 <use sections/3_orange2007/scatter_uniform_rfl.png>
@@ -1600,7 +1600,7 @@ Overfull \hbox (3.34538pt too wide) in paragraph at lines 455--456
  [][] 
  []
 
-<sections/3_orange2007/scatter_bdtopo_rfl.png, id=266, 638.385pt x 231.11343pt>
+<sections/3_orange2007/scatter_bdtopo_rfl.png, id=267, 638.385pt x 231.11343pt>
 
 File: sections/3_orange2007/scatter_bdtopo_rfl.png Graphic file (type png)
 <use sections/3_orange2007/scatter_bdtopo_rfl.png>
@@ -1616,14 +1616,14 @@ Overfull \hbox (3.336pt too wide) in paragraph at lines 458--459
 
 
 ]
-<sections/3_orange2007/compar_overpop_PHD.jpg, id=277, 335.00156pt x 280.04625p
+<sections/3_orange2007/compar_overpop_PHD.jpg, id=278, 335.00156pt x 280.04625p
 t>
 File: sections/3_orange2007/compar_overpop_PHD.jpg Graphic file (type jpg)
 <use sections/3_orange2007/compar_overpop_PHD.jpg>
 Package pdftex.def Info: sections/3_orange2007/compar_overpop_PHD.jpg  used on 
 input line 470.
 (pdftex.def)             Requested size: 201.98903pt x 168.85374pt.
-<sections/3_orange2007/compar_empty_PHD.jpg, id=278, 337.26pt x 279.29344pt>
+<sections/3_orange2007/compar_empty_PHD.jpg, id=279, 337.26pt x 279.29344pt>
 File: sections/3_orange2007/compar_empty_PHD.jpg Graphic file (type jpg)
 <use sections/3_orange2007/compar_empty_PHD.jpg>
 Package pdftex.def Info: sections/3_orange2007/compar_empty_PHD.jpg  used on in
@@ -1633,7 +1633,7 @@ put line 473.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [18]
-<sections/3_orange2007/scale_diff_analysis.png, id=293, 714.41907pt x 337.26pt>
+<sections/3_orange2007/scale_diff_analysis.png, id=294, 714.41907pt x 337.26pt>
 
 File: sections/3_orange2007/scale_diff_analysis.png Graphic file (type png)
 <use sections/3_orange2007/scale_diff_analysis.png>
@@ -1645,13 +1645,13 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [19 <./sections/3_orange2007/scatter_uniform_rfl.png> <./sections/3_orange2007/
 scatter_bdtopo_rfl.png>]
-<sections/3_orange2007/diff_mae_dep.png, id=305, 284.5029pt x 284.5029pt>
+<sections/3_orange2007/diff_mae_dep.png, id=306, 284.5029pt x 284.5029pt>
 File: sections/3_orange2007/diff_mae_dep.png Graphic file (type png)
 <use sections/3_orange2007/diff_mae_dep.png>
 Package pdftex.def Info: sections/3_orange2007/diff_mae_dep.png  used on input 
 line 518.
 (pdftex.def)             Requested size: 201.98978pt x 201.98978pt.
-<sections/3_orange2007/diff_rmse_dep.png, id=306, 284.5029pt x 284.5029pt>
+<sections/3_orange2007/diff_rmse_dep.png, id=307, 284.5029pt x 284.5029pt>
 File: sections/3_orange2007/diff_rmse_dep.png Graphic file (type png)
 <use sections/3_orange2007/diff_rmse_dep.png>
 Package pdftex.def Info: sections/3_orange2007/diff_rmse_dep.png  used on input
@@ -1696,20 +1696,20 @@ _dep.png>]
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<sections/3_orange2007/diff_uniform_meuse.png, id=333, 343.2825pt x 463.7325pt>
+<sections/3_orange2007/diff_uniform_meuse.png, id=334, 343.2825pt x 463.7325pt>
 
 File: sections/3_orange2007/diff_uniform_meuse.png Graphic file (type png)
 <use sections/3_orange2007/diff_uniform_meuse.png>
 Package pdftex.def Info: sections/3_orange2007/diff_uniform_meuse.png  used on 
 input line 541.
 (pdftex.def)             Requested size: 189.56546pt x 256.07967pt.
-<sections/3_orange2007/diff_bdtopo_meuse.png, id=334, 342.5297pt x 463.7325pt>
+<sections/3_orange2007/diff_bdtopo_meuse.png, id=335, 342.5297pt x 463.7325pt>
 File: sections/3_orange2007/diff_bdtopo_meuse.png Graphic file (type png)
 <use sections/3_orange2007/diff_bdtopo_meuse.png>
 Package pdftex.def Info: sections/3_orange2007/diff_bdtopo_meuse.png  used on i
 nput line 544.
 (pdftex.def)             Requested size: 189.14977pt x 256.07967pt.
-<sections/3_orange2007/diff_uniform_paris_lisse.png, id=335, 456.20438pt x 413.
+<sections/3_orange2007/diff_uniform_paris_lisse.png, id=336, 456.20438pt x 413.
 29407pt>
 File: sections/3_orange2007/diff_uniform_paris_lisse.png Graphic file (type png
 )
@@ -1717,7 +1717,7 @@ File: sections/3_orange2007/diff_uniform_paris_lisse.png Graphic file (type png
 Package pdftex.def Info: sections/3_orange2007/diff_uniform_paris_lisse.png  us
 ed on input line 547.
 (pdftex.def)             Requested size: 251.26123pt x 227.62775pt.
-<sections/3_orange2007/diff_bdtopo_paris_lisse.png, id=336, 457.71pt x 415.5525
+<sections/3_orange2007/diff_bdtopo_paris_lisse.png, id=337, 457.71pt x 415.5525
 pt>
 File: sections/3_orange2007/diff_bdtopo_paris_lisse.png Graphic file (type png)
 
@@ -1774,10 +1774,10 @@ m/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/tex
 mf/fonts/type1/public/lm/lmsy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy
 9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on submission_seville.pdf (28 pages, 5575702 bytes).
+Output written on submission_seville.pdf (28 pages, 5575035 bytes).
 PDF statistics:
- 521 PDF objects out of 1000 (max. 8388607)
- 421 compressed objects within 5 object streams
+ 522 PDF objects out of 1000 (max. 8388607)
+ 422 compressed objects within 5 object streams
  149 named destinations out of 1000 (max. 500000)
  26856 words of extra memory for PDF output out of 29859 (max. 10000000)
 

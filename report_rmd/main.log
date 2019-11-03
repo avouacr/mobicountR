@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.13)  30 OCT 2019 18:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.13)  3 NOV 2019 19:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1451,15 +1451,16 @@ l.182 \newpage
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
-[2] [3]
-<sections/2_framework/voronoi_france_2007.jpg, id=102, 1156.32pt x 817.55438pt>
+[2] [3] [4]
+<sections/2_framework/voronoi_france_2007.jpg, id=122, 1156.32pt x 817.55438pt>
 
 File: sections/2_framework/voronoi_france_2007.jpg Graphic file (type jpg)
 <use sections/2_framework/voronoi_france_2007.jpg>
 Package pdftex.def Info: sections/2_framework/voronoi_france_2007.jpg  used on 
 input line 223.
 (pdftex.def)             Requested size: 422.76788pt x 298.91011pt.
-<sections/2_framework/spatial_mapping.png, id=105, 656.4525pt x 297.11pt>
+[5 <./sections/2_framework/voronoi_france_2007.jpg>]
+<sections/2_framework/spatial_mapping.png, id=129, 656.4525pt x 297.11pt>
 File: sections/2_framework/spatial_mapping.png Graphic file (type png)
 <use sections/2_framework/spatial_mapping.png>
 Package pdftex.def Info: sections/2_framework/spatial_mapping.png  used on inpu
@@ -1471,18 +1472,17 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 248.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 248.
-[4] [5 <./sections/2_framework/voronoi_france_2007.jpg> <./sections/2_framework
-/spatial_mapping.png (PNG copy)>]
+[6 <./sections/2_framework/spatial_mapping.png (PNG copy)>]
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 257.
 
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [6]
+) [7]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 276.
 
-<sections/3_orange2007/stats_desc_daily_events.jpg, id=140, 377.91188pt x 268.7
+<sections/3_orange2007/stats_desc_daily_events.jpg, id=160, 377.91188pt x 268.7
 5406pt>
 File: sections/3_orange2007/stats_desc_daily_events.jpg Graphic file (type jpg)
 
@@ -1490,7 +1490,7 @@ File: sections/3_orange2007/stats_desc_daily_events.jpg Graphic file (type jpg)
 Package pdftex.def Info: sections/3_orange2007/stats_desc_daily_events.jpg  use
 d on input line 296.
 (pdftex.def)             Requested size: 206.69312pt x 146.9909pt.
-<sections/3_orange2007/stats_desc_nb_distinct_days.jpg, id=141, 379.4175pt x 26
+<sections/3_orange2007/stats_desc_nb_distinct_days.jpg, id=161, 379.4175pt x 26
 8.75406pt>
 File: sections/3_orange2007/stats_desc_nb_distinct_days.jpg Graphic file (type 
 jpg)
@@ -1498,14 +1498,14 @@ jpg)
 Package pdftex.def Info: sections/3_orange2007/stats_desc_nb_distinct_days.jpg 
  used on input line 299.
 (pdftex.def)             Requested size: 206.69449pt x 146.40858pt.
-[7]
+[8]
 LaTeX Font Info:    Try loading font information for TS1+lmr on input line 308.
 
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [8 <./sections/3_orange2007/stats_desc_daily_events.jpg> <./sections/3_orange
-2007/stats_desc_nb_distinct_days.jpg>] [9]
-<sections/3_orange2007/ex_voronoi_to_grid/voro1.png, id=178, 505.89pt x 433.62p
+) [9 <./sections/3_orange2007/stats_desc_daily_events.jpg> <./sections/3_orange
+2007/stats_desc_nb_distinct_days.jpg>] [10] [11]
+<sections/3_orange2007/ex_voronoi_to_grid/voro1.png, id=208, 505.89pt x 433.62p
 t>
 File: sections/3_orange2007/ex_voronoi_to_grid/voro1.png Graphic file (type png
 )
@@ -1513,7 +1513,7 @@ File: sections/3_orange2007/ex_voronoi_to_grid/voro1.png Graphic file (type png
 Package pdftex.def Info: sections/3_orange2007/ex_voronoi_to_grid/voro1.png  us
 ed on input line 365.
 (pdftex.def)             Requested size: 140.93033pt x 120.79744pt.
-<sections/3_orange2007/ex_voronoi_to_grid/voro2.png, id=179, 505.89pt x 433.62p
+<sections/3_orange2007/ex_voronoi_to_grid/voro2.png, id=209, 505.89pt x 433.62p
 t>
 File: sections/3_orange2007/ex_voronoi_to_grid/voro2.png Graphic file (type png
 )
@@ -1521,7 +1521,7 @@ File: sections/3_orange2007/ex_voronoi_to_grid/voro2.png Graphic file (type png
 Package pdftex.def Info: sections/3_orange2007/ex_voronoi_to_grid/voro2.png  us
 ed on input line 368.
 (pdftex.def)             Requested size: 140.93033pt x 120.79744pt.
-<sections/3_orange2007/ex_voronoi_to_grid/grid1.png, id=180, 505.89pt x 433.62p
+<sections/3_orange2007/ex_voronoi_to_grid/grid1.png, id=210, 505.89pt x 433.62p
 t>
 File: sections/3_orange2007/ex_voronoi_to_grid/grid1.png Graphic file (type png
 )
@@ -1529,7 +1529,7 @@ File: sections/3_orange2007/ex_voronoi_to_grid/grid1.png Graphic file (type png
 Package pdftex.def Info: sections/3_orange2007/ex_voronoi_to_grid/grid1.png  us
 ed on input line 371.
 (pdftex.def)             Requested size: 131.52829pt x 112.73854pt.
-<sections/3_orange2007/ex_voronoi_to_grid/grid2.png, id=181, 505.89pt x 433.62p
+<sections/3_orange2007/ex_voronoi_to_grid/grid2.png, id=211, 505.89pt x 433.62p
 t>
 File: sections/3_orange2007/ex_voronoi_to_grid/grid2.png Graphic file (type png
 )
@@ -1537,7 +1537,7 @@ File: sections/3_orange2007/ex_voronoi_to_grid/grid2.png Graphic file (type png
 Package pdftex.def Info: sections/3_orange2007/ex_voronoi_to_grid/grid2.png  us
 ed on input line 374.
 (pdftex.def)             Requested size: 131.52829pt x 112.73854pt.
-<sections/3_orange2007/ex_voronoi_to_grid/grid3.png, id=182, 505.89pt x 433.62p
+<sections/3_orange2007/ex_voronoi_to_grid/grid3.png, id=212, 505.89pt x 433.62p
 t>
 File: sections/3_orange2007/ex_voronoi_to_grid/grid3.png Graphic file (type png
 )
@@ -1545,7 +1545,7 @@ File: sections/3_orange2007/ex_voronoi_to_grid/grid3.png Graphic file (type png
 Package pdftex.def Info: sections/3_orange2007/ex_voronoi_to_grid/grid3.png  us
 ed on input line 377.
 (pdftex.def)             Requested size: 131.52829pt x 112.73854pt.
-<sections/3_orange2007/ex_voronoi_to_grid/prior1.png, id=183, 505.89pt x 433.62
+<sections/3_orange2007/ex_voronoi_to_grid/prior1.png, id=213, 505.89pt x 433.62
 pt>
 File: sections/3_orange2007/ex_voronoi_to_grid/prior1.png Graphic file (type pn
 g)
@@ -1553,7 +1553,7 @@ g)
 Package pdftex.def Info: sections/3_orange2007/ex_voronoi_to_grid/prior1.png  u
 sed on input line 380.
 (pdftex.def)             Requested size: 140.93033pt x 120.79744pt.
-<sections/3_orange2007/ex_voronoi_to_grid/prior2.png, id=184, 505.89pt x 433.62
+<sections/3_orange2007/ex_voronoi_to_grid/prior2.png, id=214, 505.89pt x 433.62
 pt>
 File: sections/3_orange2007/ex_voronoi_to_grid/prior2.png Graphic file (type pn
 g)
@@ -1566,13 +1566,17 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[10] [11 <./sections/3_orange2007/ex_voronoi_to_grid/voro1.png> <./sections/3_o
-range2007/ex_voronoi_to_grid/voro2.png (PNG copy)> <./sections/3_orange2007/ex_
-voronoi_to_grid/grid1.png (PNG copy)> <./sections/3_orange2007/ex_voronoi_to_gr
-id/grid2.png (PNG copy)> <./sections/3_orange2007/ex_voronoi_to_grid/grid3.png 
-(PNG copy)> <./sections/3_orange2007/ex_voronoi_to_grid/prior1.png (PNG copy)> 
-<./sections/3_orange2007/ex_voronoi_to_grid/prior2.png (PNG copy)>] [12] [13] [
-14] [15] [16]
+[12]
+
+LaTeX Warning: Text page 13 contains only floats.
+
+[13 <./sections/3_orange2007/ex_voronoi_to_grid/voro1.png> <./sections/3_orange
+2007/ex_voronoi_to_grid/voro2.png (PNG copy)> <./sections/3_orange2007/ex_voron
+oi_to_grid/grid1.png (PNG copy)> <./sections/3_orange2007/ex_voronoi_to_grid/gr
+id2.png (PNG copy)> <./sections/3_orange2007/ex_voronoi_to_grid/grid3.png (PNG 
+copy)> <./sections/3_orange2007/ex_voronoi_to_grid/prior1.png (PNG copy)> <./se
+ctions/3_orange2007/ex_voronoi_to_grid/prior2.png (PNG copy)>] [14] [15] [16] [
+17] [18]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: <default>
@@ -1605,139 +1609,142 @@ id/grid2.png (PNG copy)> <./sections/3_orange2007/ex_voronoi_to_grid/grid3.png
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<sections/3_orange2007/phd_uniform.png, id=262, 284.5029pt x 284.5029pt>
+<sections/3_orange2007/phd_uniform.png, id=282, 284.5029pt x 284.5029pt>
 File: sections/3_orange2007/phd_uniform.png Graphic file (type png)
 <use sections/3_orange2007/phd_uniform.png>
 Package pdftex.def Info: sections/3_orange2007/phd_uniform.png  used on input l
-ine 483.
+ine 481.
 (pdftex.def)             Requested size: 227.61998pt x 227.61998pt.
-<sections/3_orange2007/phd_bdtopo.png, id=264, 284.5029pt x 284.5029pt>
+<sections/3_orange2007/phd_bdtopo.png, id=284, 284.5029pt x 284.5029pt>
 File: sections/3_orange2007/phd_bdtopo.png Graphic file (type png)
 <use sections/3_orange2007/phd_bdtopo.png>
 Package pdftex.def Info: sections/3_orange2007/phd_bdtopo.png  used on input li
-ne 486.
+ne 484.
 (pdftex.def)             Requested size: 227.61998pt x 227.61998pt.
-<sections/3_orange2007/rfl.png, id=265, 284.5029pt x 284.5029pt>
+<sections/3_orange2007/rfl.png, id=285, 284.5029pt x 284.5029pt>
 File: sections/3_orange2007/rfl.png Graphic file (type png)
 <use sections/3_orange2007/rfl.png>
-Package pdftex.def Info: sections/3_orange2007/rfl.png  used on input line 489.
+Package pdftex.def Info: sections/3_orange2007/rfl.png  used on input line 487.
 
 (pdftex.def)             Requested size: 227.61998pt x 227.61998pt.
-<sections/3_orange2007/diff_uniform_rfl.png, id=266, 304.2567pt x 284.5029pt>
+<sections/3_orange2007/diff_uniform_rfl.png, id=286, 304.2567pt x 284.5029pt>
 File: sections/3_orange2007/diff_uniform_rfl.png Graphic file (type png)
 <use sections/3_orange2007/diff_uniform_rfl.png>
 Package pdftex.def Info: sections/3_orange2007/diff_uniform_rfl.png  used on in
-put line 492.
+put line 490.
 (pdftex.def)             Requested size: 227.62556pt x 212.84702pt.
-<sections/3_orange2007/diff_bdtopo_rfl.png, id=267, 304.2567pt x 284.5029pt>
+<sections/3_orange2007/diff_bdtopo_rfl.png, id=287, 304.2567pt x 284.5029pt>
 File: sections/3_orange2007/diff_bdtopo_rfl.png Graphic file (type png)
 <use sections/3_orange2007/diff_bdtopo_rfl.png>
 Package pdftex.def Info: sections/3_orange2007/diff_bdtopo_rfl.png  used on inp
-ut line 495.
+ut line 493.
 (pdftex.def)             Requested size: 227.62556pt x 212.84702pt.
 
-LaTeX Warning: Float too large for page by 6.19467pt on input line 497.
+LaTeX Warning: Float too large for page by 16.31967pt on input line 495.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[17 <./sections/3_orange2007/phd_uniform.png> <./sections/3_orange2007/phd_bdto
+[19 <./sections/3_orange2007/phd_uniform.png> <./sections/3_orange2007/phd_bdto
 po.png> <./sections/3_orange2007/rfl.png> <./sections/3_orange2007/diff_uniform
 _rfl.png> <./sections/3_orange2007/diff_bdtopo_rfl.png>]
-Overfull \hbox (5.0pt too wide) detected at line 514
+Overfull \hbox (5.0pt too wide) detected at line 512
  
  []
 
 
-Overfull \hbox (5.0pt too wide) detected at line 514
+Overfull \hbox (5.0pt too wide) detected at line 512
  
  []
 
 
-Overfull \hbox (5.0pt too wide) detected at line 515
+Overfull \hbox (5.0pt too wide) detected at line 513
  
  []
 
 
-Overfull \hbox (5.0pt too wide) detected at line 515
+Overfull \hbox (5.0pt too wide) detected at line 513
  
  []
 
 
-Overfull \hbox (5.0pt too wide) detected at line 515
+Overfull \hbox (5.0pt too wide) detected at line 513
  
  []
 
-<sections/3_orange2007/scatter_uniform_rfl.png, id=284, 634.62094pt x 228.855pt
+<sections/3_orange2007/scatter_uniform_rfl.png, id=307, 634.62094pt x 228.855pt
 >
 File: sections/3_orange2007/scatter_uniform_rfl.png Graphic file (type png)
 <use sections/3_orange2007/scatter_uniform_rfl.png>
 Package pdftex.def Info: sections/3_orange2007/scatter_uniform_rfl.png  used on
- input line 526.
+ input line 524.
 (pdftex.def)             Requested size: 469.76707pt x 169.40591pt.
 
-Overfull \hbox (3.34538pt too wide) in paragraph at lines 526--527
+Overfull \hbox (3.34538pt too wide) in paragraph at lines 524--525
  [][] 
  []
 
-<sections/3_orange2007/scatter_bdtopo_rfl.png, id=285, 638.385pt x 231.11343pt>
+<sections/3_orange2007/scatter_bdtopo_rfl.png, id=308, 638.385pt x 231.11343pt>
 
 File: sections/3_orange2007/scatter_bdtopo_rfl.png Graphic file (type png)
 <use sections/3_orange2007/scatter_bdtopo_rfl.png>
 Package pdftex.def Info: sections/3_orange2007/scatter_bdtopo_rfl.png  used on 
-input line 529.
+input line 527.
 (pdftex.def)             Requested size: 469.75769pt x 170.06558pt.
 
-Overfull \hbox (3.336pt too wide) in paragraph at lines 529--530
+Overfull \hbox (3.336pt too wide) in paragraph at lines 527--528
  [][] 
  []
 
-<sections/3_orange2007/compar_overpop_PHD.jpg, id=288, 335.00156pt x 280.04625p
+<sections/3_orange2007/compar_overpop_PHD.jpg, id=311, 335.00156pt x 280.04625p
 t>
 File: sections/3_orange2007/compar_overpop_PHD.jpg Graphic file (type jpg)
 <use sections/3_orange2007/compar_overpop_PHD.jpg>
 Package pdftex.def Info: sections/3_orange2007/compar_overpop_PHD.jpg  used on 
-input line 541.
+input line 539.
 (pdftex.def)             Requested size: 201.98903pt x 168.85374pt.
-<sections/3_orange2007/compar_empty_PHD.jpg, id=289, 337.26pt x 279.29344pt>
+<sections/3_orange2007/compar_empty_PHD.jpg, id=312, 337.26pt x 279.29344pt>
 File: sections/3_orange2007/compar_empty_PHD.jpg Graphic file (type jpg)
 <use sections/3_orange2007/compar_empty_PHD.jpg>
 Package pdftex.def Info: sections/3_orange2007/compar_empty_PHD.jpg  used on in
-put line 544.
+put line 542.
 (pdftex.def)             Requested size: 201.99217pt x 167.27477pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[18
+[20
 
 
-] [19 <./sections/3_orange2007/scatter_uniform_rfl.png> <./sections/3_orange200
-7/scatter_bdtopo_rfl.png>] [20 <./sections/3_orange2007/compar_overpop_PHD.jpg>
+] [21 <./sections/3_orange2007/scatter_uniform_rfl.png> <./sections/3_orange200
+7/scatter_bdtopo_rfl.png>] [22 <./sections/3_orange2007/compar_overpop_PHD.jpg>
  <./sections/3_orange2007/compar_empty_PHD.jpg>]
-<sections/3_orange2007/scale_diff_analysis.png, id=321, 714.41907pt x 337.26pt>
+<sections/3_orange2007/scale_diff_analysis.png, id=344, 714.41907pt x 337.26pt>
 
 File: sections/3_orange2007/scale_diff_analysis.png Graphic file (type png)
 <use sections/3_orange2007/scale_diff_analysis.png>
 Package pdftex.def Info: sections/3_orange2007/scale_diff_analysis.png  used on
- input line 578.
+ input line 576.
 (pdftex.def)             Requested size: 421.90694pt x 199.17207pt.
-<sections/3_orange2007/diff_mae_dep.png, id=323, 284.5029pt x 284.5029pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<sections/3_orange2007/diff_mae_dep.png, id=346, 284.5029pt x 284.5029pt>
 File: sections/3_orange2007/diff_mae_dep.png Graphic file (type png)
 <use sections/3_orange2007/diff_mae_dep.png>
 Package pdftex.def Info: sections/3_orange2007/diff_mae_dep.png  used on input 
-line 589.
+line 587.
 (pdftex.def)             Requested size: 201.98978pt x 201.98978pt.
-<sections/3_orange2007/diff_rmse_dep.png, id=324, 284.5029pt x 284.5029pt>
+<sections/3_orange2007/diff_rmse_dep.png, id=347, 284.5029pt x 284.5029pt>
 File: sections/3_orange2007/diff_rmse_dep.png Graphic file (type png)
 <use sections/3_orange2007/diff_rmse_dep.png>
 Package pdftex.def Info: sections/3_orange2007/diff_rmse_dep.png  used on input
- line 592.
+ line 590.
 (pdftex.def)             Requested size: 201.98978pt x 201.98978pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[21 <./sections/3_orange2007/scale_diff_analysis.png>] [22 <./sections/3_orange
-2007/diff_mae_dep.png> <./sections/3_orange2007/diff_rmse_dep.png>] [23]
+[23] [24 <./sections/3_orange2007/scale_diff_analysis.png>] [25 <./sections/3_o
+range2007/diff_mae_dep.png> <./sections/3_orange2007/diff_rmse_dep.png>] [26]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: <default>
@@ -1770,260 +1777,283 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<sections/3_orange2007/diff_uniform_meuse.png, id=349, 343.2825pt x 463.7325pt>
+<sections/3_orange2007/diff_uniform_meuse.png, id=378, 343.2825pt x 463.7325pt>
 
 File: sections/3_orange2007/diff_uniform_meuse.png Graphic file (type png)
 <use sections/3_orange2007/diff_uniform_meuse.png>
 Package pdftex.def Info: sections/3_orange2007/diff_uniform_meuse.png  used on 
-input line 616.
+input line 614.
 (pdftex.def)             Requested size: 189.56546pt x 256.07967pt.
-<sections/3_orange2007/diff_bdtopo_meuse.png, id=350, 342.5297pt x 463.7325pt>
+<sections/3_orange2007/diff_bdtopo_meuse.png, id=379, 342.5297pt x 463.7325pt>
 File: sections/3_orange2007/diff_bdtopo_meuse.png Graphic file (type png)
 <use sections/3_orange2007/diff_bdtopo_meuse.png>
 Package pdftex.def Info: sections/3_orange2007/diff_bdtopo_meuse.png  used on i
-nput line 619.
+nput line 617.
 (pdftex.def)             Requested size: 189.14977pt x 256.07967pt.
-<sections/3_orange2007/diff_uniform_paris_lisse.png, id=351, 456.20438pt x 413.
+<sections/3_orange2007/diff_uniform_paris_lisse.png, id=380, 456.20438pt x 413.
 29407pt>
 File: sections/3_orange2007/diff_uniform_paris_lisse.png Graphic file (type png
 )
 <use sections/3_orange2007/diff_uniform_paris_lisse.png>
 Package pdftex.def Info: sections/3_orange2007/diff_uniform_paris_lisse.png  us
-ed on input line 622.
+ed on input line 620.
 (pdftex.def)             Requested size: 251.26123pt x 227.62775pt.
-<sections/3_orange2007/diff_bdtopo_paris_lisse.png, id=352, 457.71pt x 415.5525
+<sections/3_orange2007/diff_bdtopo_paris_lisse.png, id=381, 457.71pt x 415.5525
 pt>
 File: sections/3_orange2007/diff_bdtopo_paris_lisse.png Graphic file (type png)
 
 <use sections/3_orange2007/diff_bdtopo_paris_lisse.png>
 Package pdftex.def Info: sections/3_orange2007/diff_bdtopo_paris_lisse.png  use
-d on input line 625.
+d on input line 623.
 (pdftex.def)             Requested size: 250.71461pt x 227.62248pt.
 
-LaTeX Warning: Float too large for page by 28.73082pt on input line 627.
+LaTeX Warning: Float too large for page by 41.23082pt on input line 625.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[24 <./sections/3_orange2007/diff_uniform_meuse.png> <./sections/3_orange2007/d
+[27 <./sections/3_orange2007/diff_uniform_meuse.png> <./sections/3_orange2007/d
 iff_bdtopo_meuse.png> <./sections/3_orange2007/diff_uniform_paris_lisse.png> <.
-/sections/3_orange2007/diff_bdtopo_paris_lisse.png>] [25
+/sections/3_orange2007/diff_bdtopo_paris_lisse.png>] [28
 
 
-] [26]
-<sections/4_appendixA/doc_package.pdf, id=400, 614.295pt x 794.97pt>
+] [29]
+<sections/4_appendixA/doc_package.pdf, id=424, 614.295pt x 794.97pt>
 File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
 <use sections/4_appendixA/doc_package.pdf>
 Package pdftex.def Info: sections/4_appendixA/doc_package.pdf  used on input li
-ne 747.
+ne 743.
 (pdftex.def)             Requested size: 469.75604pt x 607.9196pt.
 File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
 <use sections/4_appendixA/doc_package.pdf>
 Package pdftex.def Info: sections/4_appendixA/doc_package.pdf  used on input li
-ne 747.
+ne 743.
 (pdftex.def)             Requested size: 469.75604pt x 607.9196pt.
-<sections/4_appendixA/doc_package.pdf, id=403, page=1, 614.295pt x 794.97pt>
+<sections/4_appendixA/doc_package.pdf, id=427, page=1, 614.295pt x 794.97pt>
 File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
 <use sections/4_appendixA/doc_package.pdf, page 1>
 Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page1 used on i
-nput line 747.
+nput line 743.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
 <use sections/4_appendixA/doc_package.pdf, page 1>
 Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page1 used on i
-nput line 747.
-(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
-[27]
+nput line 743.
+(pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
+[30]
 File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
 <use sections/4_appendixA/doc_package.pdf, page 1>
 Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page1 used on i
-nput line 747.
-(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+nput line 743.
+(pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
 File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
 <use sections/4_appendixA/doc_package.pdf, page 1>
 Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page1 used on i
-nput line 747.
-(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+nput line 743.
+(pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
 File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
 <use sections/4_appendixA/doc_package.pdf, page 1>
 Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page1 used on i
-nput line 747.
-(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
-[28 <./sections/4_appendixA/doc_package.pdf>]
-<sections/4_appendixA/doc_package.pdf, id=440, page=2, 614.295pt x 794.97pt>
-File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
-<use sections/4_appendixA/doc_package.pdf, page 2>
-Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page2 used on i
-nput line 747.
-(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
-File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
-<use sections/4_appendixA/doc_package.pdf, page 2>
-Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page2 used on i
-nput line 747.
-(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
-File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
-<use sections/4_appendixA/doc_package.pdf, page 2>
-Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page2 used on i
-nput line 747.
-(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
-[29 <./sections/4_appendixA/doc_package.pdf>]
-<sections/4_appendixA/doc_package.pdf, id=460, page=3, 614.295pt x 794.97pt>
-File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
-<use sections/4_appendixA/doc_package.pdf, page 3>
-Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page3 used on i
-nput line 747.
-(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
-File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
-<use sections/4_appendixA/doc_package.pdf, page 3>
-Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page3 used on i
-nput line 747.
-(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
-File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
-<use sections/4_appendixA/doc_package.pdf, page 3>
-Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page3 used on i
-nput line 747.
-(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
-[30 <./sections/4_appendixA/doc_package.pdf>]
-<sections/4_appendixA/doc_package.pdf, id=466, page=4, 614.295pt x 794.97pt>
-File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
-<use sections/4_appendixA/doc_package.pdf, page 4>
-Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page4 used on i
-nput line 747.
-(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
-File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
-<use sections/4_appendixA/doc_package.pdf, page 4>
-Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page4 used on i
-nput line 747.
-(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
-File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
-<use sections/4_appendixA/doc_package.pdf, page 4>
-Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page4 used on i
-nput line 747.
-(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+nput line 743.
+(pdftex.def)             Requested size: 552.86038pt x 715.4664pt.
 [31 <./sections/4_appendixA/doc_package.pdf>]
-<sections/4_appendixA/doc_package.pdf, id=471, page=5, 614.295pt x 794.97pt>
 File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
-<use sections/4_appendixA/doc_package.pdf, page 5>
-Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page5 used on i
-nput line 747.
+<use sections/4_appendixA/doc_package.pdf>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf  used on input li
+ne 744.
+(pdftex.def)             Requested size: 469.75604pt x 607.9196pt.
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf  used on input li
+ne 744.
+(pdftex.def)             Requested size: 469.75604pt x 607.9196pt.
+<sections/4_appendixA/doc_package.pdf, id=470, page=2, 614.295pt x 794.97pt>
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 2>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page2 used on i
+nput line 744.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 2>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page2 used on i
+nput line 744.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
-<use sections/4_appendixA/doc_package.pdf, page 5>
-Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page5 used on i
-nput line 747.
+<use sections/4_appendixA/doc_package.pdf, page 2>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page2 used on i
+nput line 744.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
-<use sections/4_appendixA/doc_package.pdf, page 5>
-Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page5 used on i
-nput line 747.
+<use sections/4_appendixA/doc_package.pdf, page 2>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page2 used on i
+nput line 744.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 2>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page2 used on i
+nput line 744.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 [32 <./sections/4_appendixA/doc_package.pdf>]
-<sections/4_appendixA/doc_package.pdf, id=476, page=6, 614.295pt x 794.97pt>
+<sections/4_appendixA/doc_package.pdf, id=490, page=3, 614.295pt x 794.97pt>
 File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
-<use sections/4_appendixA/doc_package.pdf, page 6>
-Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page6 used on i
-nput line 747.
+<use sections/4_appendixA/doc_package.pdf, page 3>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page3 used on i
+nput line 744.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
-<use sections/4_appendixA/doc_package.pdf, page 6>
-Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page6 used on i
-nput line 747.
+<use sections/4_appendixA/doc_package.pdf, page 3>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page3 used on i
+nput line 744.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
-<use sections/4_appendixA/doc_package.pdf, page 6>
-Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page6 used on i
-nput line 747.
+<use sections/4_appendixA/doc_package.pdf, page 3>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page3 used on i
+nput line 744.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 [33 <./sections/4_appendixA/doc_package.pdf>]
-<sections/4_appendixA/doc_package.pdf, id=481, page=7, 614.295pt x 794.97pt>
+<sections/4_appendixA/doc_package.pdf, id=495, page=4, 614.295pt x 794.97pt>
 File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
-<use sections/4_appendixA/doc_package.pdf, page 7>
-Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page7 used on i
-nput line 747.
+<use sections/4_appendixA/doc_package.pdf, page 4>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page4 used on i
+nput line 744.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
-<use sections/4_appendixA/doc_package.pdf, page 7>
-Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page7 used on i
-nput line 747.
+<use sections/4_appendixA/doc_package.pdf, page 4>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page4 used on i
+nput line 744.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
-<use sections/4_appendixA/doc_package.pdf, page 7>
-Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page7 used on i
-nput line 747.
+<use sections/4_appendixA/doc_package.pdf, page 4>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page4 used on i
+nput line 744.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 [34 <./sections/4_appendixA/doc_package.pdf>]
-<sections/4_appendixA/doc_package.pdf, id=486, page=8, 614.295pt x 794.97pt>
+<sections/4_appendixA/doc_package.pdf, id=500, page=5, 614.295pt x 794.97pt>
 File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
-<use sections/4_appendixA/doc_package.pdf, page 8>
-Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page8 used on i
-nput line 747.
+<use sections/4_appendixA/doc_package.pdf, page 5>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page5 used on i
+nput line 744.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
-<use sections/4_appendixA/doc_package.pdf, page 8>
-Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page8 used on i
-nput line 747.
+<use sections/4_appendixA/doc_package.pdf, page 5>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page5 used on i
+nput line 744.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
-<use sections/4_appendixA/doc_package.pdf, page 8>
-Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page8 used on i
-nput line 747.
+<use sections/4_appendixA/doc_package.pdf, page 5>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page5 used on i
+nput line 744.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 [35 <./sections/4_appendixA/doc_package.pdf>]
-<sections/4_appendixA/doc_package.pdf, id=491, page=9, 614.295pt x 794.97pt>
+<sections/4_appendixA/doc_package.pdf, id=505, page=6, 614.295pt x 794.97pt>
 File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
-<use sections/4_appendixA/doc_package.pdf, page 9>
-Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page9 used on i
-nput line 747.
+<use sections/4_appendixA/doc_package.pdf, page 6>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page6 used on i
+nput line 744.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
-<use sections/4_appendixA/doc_package.pdf, page 9>
-Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page9 used on i
-nput line 747.
+<use sections/4_appendixA/doc_package.pdf, page 6>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page6 used on i
+nput line 744.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
-<use sections/4_appendixA/doc_package.pdf, page 9>
-Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page9 used on i
-nput line 747.
+<use sections/4_appendixA/doc_package.pdf, page 6>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page6 used on i
+nput line 744.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 [36 <./sections/4_appendixA/doc_package.pdf>]
-<sections/4_appendixA/doc_package.pdf, id=497, page=10, 614.295pt x 794.97pt>
+<sections/4_appendixA/doc_package.pdf, id=511, page=7, 614.295pt x 794.97pt>
 File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
-<use sections/4_appendixA/doc_package.pdf, page 10>
-Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page10 used on 
-input line 747.
+<use sections/4_appendixA/doc_package.pdf, page 7>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page7 used on i
+nput line 744.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
-<use sections/4_appendixA/doc_package.pdf, page 10>
-Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page10 used on 
-input line 747.
+<use sections/4_appendixA/doc_package.pdf, page 7>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page7 used on i
+nput line 744.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
-<use sections/4_appendixA/doc_package.pdf, page 10>
-Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page10 used on 
-input line 747.
+<use sections/4_appendixA/doc_package.pdf, page 7>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page7 used on i
+nput line 744.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 [37 <./sections/4_appendixA/doc_package.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 750.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 750.
+<sections/4_appendixA/doc_package.pdf, id=516, page=8, 614.295pt x 794.97pt>
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 8>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page8 used on i
+nput line 744.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 8>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page8 used on i
+nput line 744.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 8>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page8 used on i
+nput line 744.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+[38 <./sections/4_appendixA/doc_package.pdf>]
+<sections/4_appendixA/doc_package.pdf, id=521, page=9, 614.295pt x 794.97pt>
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 9>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page9 used on i
+nput line 744.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 9>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page9 used on i
+nput line 744.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 9>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page9 used on i
+nput line 744.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+[39 <./sections/4_appendixA/doc_package.pdf>]
+<sections/4_appendixA/doc_package.pdf, id=526, page=10, 614.295pt x 794.97pt>
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 10>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page10 used on 
+input line 744.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 10>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page10 used on 
+input line 744.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: sections/4_appendixA/doc_package.pdf Graphic file (type pdf)
+<use sections/4_appendixA/doc_package.pdf, page 10>
+Package pdftex.def Info: sections/4_appendixA/doc_package.pdf , page10 used on 
+input line 744.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+[40 <./sections/4_appendixA/doc_package.pdf>] (./sections/5_summary_notes/fr.te
+x [41]) [42] (./sections/5_summary_notes/eng.tex [43]) [44] (./sections/5_summa
+ry_notes/stages_longs.tex [45] [46] [47])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 763.
+[48]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 763.
 (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 750.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 750.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 763.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 763.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 0883E11933FA37D7C9FF6AE0E3159227;2668.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 750.
+(rerunfilecheck)             Checksum: 718F6E5E5217E134E4F1BAA024D89223;3236.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 763.
  ) 
 Here is how much of TeX's memory you used:
- 26166 strings out of 492982
- 472406 string characters out of 6134896
- 531275 words of memory out of 5000000
- 29068 multiletter control sequences out of 15000+600000
- 652660 words of font info for 197 fonts, out of 8000000 for 9000
+ 26238 strings out of 492982
+ 473306 string characters out of 6134896
+ 529303 words of memory out of 5000000
+ 29071 multiletter control sequences out of 15000+600000
+ 653830 words of font info for 206 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,18n,49p,10383b,862s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,19n,49p,10383b,861s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/en
-c/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/u
-sr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/l
-m/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texlive
+c/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/s
+hare/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
+-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texlive
 /texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/share/tex
 mf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmb
 x12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx9.pfb></usr/share/texmf/fon
@@ -2046,10 +2076,10 @@ dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
 utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (38 pages, 5738753 bytes).
+Output written on main.pdf (49 pages, 5765466 bytes).
 PDF statistics:
- 640 PDF objects out of 1000 (max. 8388607)
- 507 compressed objects within 6 object streams
- 160 named destinations out of 1000 (max. 500000)
- 28985 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 739 PDF objects out of 1000 (max. 8388607)
+ 593 compressed objects within 6 object streams
+ 201 named destinations out of 1000 (max. 500000)
+ 29019 words of extra memory for PDF output out of 29859 (max. 10000000)
 

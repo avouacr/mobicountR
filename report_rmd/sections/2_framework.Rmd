@@ -37,7 +37,7 @@ Each phone event is observed at cell level, i.e. the actual antenna transmitting
 
 [^tiles_cells]: Tiles are the spatial units composing a grid. In spatial analysis, they are often also referred to as "cells", but we choose to call them "tiles" so as to distinguish them from antennae cells.
 
-This bayesian framework appears as a satisfactory solution to the research problem stated before. First, it can be computed on any given input grid. Second, it can accomodate a wide range of situations as regards information availability on antennae coverage from the MNO. Finally, various data sources — notably official statistics ones — can be mobilized to compute prior distributions on the chosen grid, so as to take into account the unequal probabilities of human presence on the French territory. In section \@ref(#orange2007), we provide an application of this model to a mobile phone dataset for which no information on antennae coverage was available.
+This bayesian framework appears as a satisfactory solution to the research problem stated before. First, it can be computed on any given input grid. Second, it can accomodate a wide range of situations as regards information availability on antennae coverage from the MNO. Finally, various data sources — notably official statistics ones — can be mobilized to compute prior distributions on the chosen grid, so as to take into account the unequal probabilities of human presence on the French territory. In section \@ref(orange2007), we provide an application of this model to a mobile phone dataset for which no information on antennae coverage was available.
 
 ## Implementation as an R package : mobicountR
 

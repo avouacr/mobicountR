@@ -1,0 +1,27 @@
+
+%%% APPENDICES %%%
+
+\includepdf[pagecommand={
+\section*{Appendices}
+\addcontentsline{toc}{section}{Appendices}
+\subsection*{Appendix A : R package documentation}
+\label{sec.appA}
+\addcontentsline{toc}{subsection}{Appendix A : R package documentation}
+}, pages=1, scale=0.9]{sections/4_appendixA/doc_package.pdf}
+\includepdf[pagecommand={\thispagestyle{plain}}, pages=2-10]{sections/4_appendixA/doc_package.pdf}
+
+%%% SUMMARY NOTES %%%
+
+\section*{Note de synthèse}
+\addcontentsline{toc}{section}{Note de synthèse}
+\input{sections/5_summary_notes/fr.tex}
+\newpage
+
+\section*{Summary note}
+\addcontentsline{toc}{section}{Summary note}
+\input{sections/5_summary_notes/eng.tex}
+\newpage
+
+\section*{Résumé des stages longs}
+\addcontentsline{toc}{section}{Résumé des stages longs}
+\input{sections/5_summary_notes/stages_longs.tex}
