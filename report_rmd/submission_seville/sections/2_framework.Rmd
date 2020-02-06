@@ -41,7 +41,5 @@ This bayesian framework appears as a satisfactory solution to the research probl
 
 ## Implementation as an R package : mobicountR
 
-The analysis presented in this paper was implemented using R programming language. To improve reproducibility of results, all functions used were gathered inside an R package called \verb+mobicountR+. A first group of functions consists in tools to build and manage the spatial units used in the analysis. A second group of function is devoted to prior distributions computation for the bayesian model using various statistical sources. A third group of functions serves to implement the bayesian framework, by computing posterior distribution over a given input grid. Finally, we provide a fourth group of functions devoted to diagnostic analysis and quality evaluation by comparison with a given validation data source. This package will be available soon on github[^github].
-
-[^github]: \url{https://github.com/avouacr}
+The analysis presented in this paper was implemented using R programming language. To improve reproducibility of results, all functions used were gathered inside an R package called \verb+mobicountR+. A first group of functions consists in tools to build and manage the spatial units used in the analysis. A second group of function is devoted to prior distributions computation for the bayesian model using various statistical sources. A third group of functions serves to implement the bayesian framework, by computing posterior distribution over a given input grid. Finally, we provide a fourth group of functions devoted to diagnostic analysis and quality evaluation by comparison with a given validation data source.
 

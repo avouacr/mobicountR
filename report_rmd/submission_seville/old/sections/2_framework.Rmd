@@ -1,0 +1,47 @@
+# A bayesian framework to improve geographical location of mobile phone events {#framework}
+
+In this section, we present the methodological framework on which our population estimates are based. First, we present the research problem : mapping the unknown location of mobile phone users. Then, we present the bayesian model used to perform this mapping in a probabilistic way. Specifically, we highlight one of the main advantage of this framework : it is highly flexible, in the sense that it can accommodate a wide range of situations as regards available information.
+
+## The spatial mapping problem
+
+Each phone event, defined as a connection of a mobile device to a network, leaves a digital track. As such, these tracks represent a major opportunity to get a very fine view of spatial footprints of mobile phone users. However, these tracks generally do not contain information on the geographical location of the device. Data collected by mobile network operators (MNO) are primarily devoted to customers billing and network analysis. But these tasks only require the identification of the antenna that the mobile device has connected to. Although geographical coordinates of the antenna tower are known precisely, the exact location of the user is not. Consequently, when using mobile phone data to describe human behavior, the first step is to map events to a likely location.
+
+Various methods can be used to proceed to this mapping. The main factor in choosing between them is the amount of available technical information on the MNO network. However, such information is rarely available, and may be considered as sensitive by MNOs when it is. Thus, many authors in the literature resort to a common approximation : coverage areas are modelled by a Voronoi tessellation. Each point of the space is mapped to its closest antenna, which produces a partition of the space in convex polygons (figure \@ref(fig:voronoi2007)). Coverage of a given antenna is then assumed to correspond to the polygon in which it is located.
+
+There are several downsides to relying on Voronoi tessellation to approximate the geographical location of phone users. First, many technical factors influence the choice of an antenna by a particular device, such as the type of the antenna (omnidirectional or directional), its coverage range, the generation of wireless technology used by the device (2G, 3G, 4G) and even its brand (different brands use different device-cell matching algorithms). As a result, it is often the case that a given phone connects to an antenna which is not the closest one. Besides, Voronoi tessellation constitutes a partition of the space, and thus fails to take into account the fact that antennae coverage areas actually overlap, so that one antenna can take over if another one is overloaded. In fact, mobile phones connections switch from one antenna to another even when standing still. These shortcomings explain why counting present population based on this hypothesis can generate significant bias.
+
+```{r voronoi2007, echo = FALSE, fig.align='center', fig.cap='Voronoi tessellation of France based on the location of Orange antennae in 2007 (source : Sakarovitch et al., 2019)', out.width='90%'}
+knitr::include_graphics('sections/2_framework/voronoi_france_2007.png')
+```
+
+Another important downside to using Voronoi tessellation is that the shape of its polygons are entirely dependent on the spatial distribution of antennae. This poses two problems. First, there is no reason for Voronoi polygons to match any of the spatial units used in official statistics. Yet, if we want to combine present population estimates with other sources, we have to be able to produce these statistics on a common spatial unit, such as Eurostat INSPIRE grid, French municipalities, etc. Second, as evident from figure \@ref(fig:voronoi2007), the size of the Voronoi polygons depends on the local density of antennae : in rural areas, antennae distribution is sparse and thus polygons are large, and conversely for urban areas. This is not directly an issue for present population estimates, as this heterogeneity rightfully reflects the fact that estimates can't have the same precision everywhere. However, it can become problematic when these estimates are used in combination with other data sources, such as localized fiscal data to study social and spatial segregation, as it can cause modifiable areal unit problem (Openshaw, 1984) and so introduce bias.
+
+Our research problem is thus to map events which are observed on the mobile network to a given input grid. Furthermore, we want to be able to incorporate any available information (MNOs data on antennae coverage, official statistics sources) that can improve the spatial accuracy of the mapping. Figure \@ref(fig:spatialmapping) sums up this procedure.
+
+```{r spatialmapping, echo = FALSE, fig.align='center', fig.cap='Spatial mapping procedure', out.width='80%'}
+knitr::include_graphics('sections/2_framework/spatial_mapping.png')
+```
+
+
+
+
+## A bayesian model to probabilize mobile phone events location
+
+All along this report, we use a localization method of mobile phone users based on a framework developed by Tennekes (2018). It fundamentally relies on Bayes' formula :
+\begingroup \large
+$$\mathbb{P}(tile_i | cell_j) \propto \mathbb{P}(tile_i) \mathbb{P}(cell_j | tile_i)$$
+\endgroup
+Each phone event is observed at cell level, i.e. the actual antenna transmitting the signal[^antenna_clarification]. The problem is then to infer in which tile[^tiles_cells] of the grid the mobile phone that generated this record was located. We want this location to be probabilized over the grid : as the only geographical information we have is the coordinates of the antenna to which the device has connected, we can never be certain of the actual location of the user. Bayes' rule states that this probability is proportional to any prior information we might have on each tile multiplied by the probability that the signal comes from a given cell knowing that the phone was on a particular grid tile. This latter probability — the likelihood — corresponds to the way we model antennae coverage. It should be as faithful as possible a reproduction of the actual coverage areas of antennae. The way we model it is thus entirely dependent on available information, from no information except antennae coordinates (Voronoi modelisation) to the most detailed information (best service areas, radio propagation models...).
+
+[^antenna_clarification]: Up until now, we used the term "antenna" loosely. Yet it is important to distinguish the actual transmitter of the signal (the cell) and the antenna mast, on which multiple cells are generally located. When a phone event is observed, we know the specific cell to which the device has connected. Geographically speaking, this only gives us the coordinates of the mast on which it is located, next to some other cells. However, this is particularly important if we have access to information on cell technologies, because we can take it into account to compute probabilities based on theoretical coverage. In this report, we use the terms "antenna" and "cell" interchangeably, keeping in mind that geographical coordinates are those of the mast.
+
+[^tiles_cells]: Tiles are the spatial units composing a grid. In spatial analysis, they are often also referred to as "cells", but we choose to call them "tiles" so as to distinguish them from antennae cells.
+
+This bayesian framework appears as a satisfactory solution to the research problem stated before. First, it can be computed on any given input grid. Second, it can accomodate a wide range of situations as regards information availability on antennae coverage from the MNO. Finally, various data sources — notably official statistics ones — can be mobilized to compute prior distributions on the chosen grid, so as to take into account the unequal probabilities of human presence on the French territory. In section \@ref(orange2007), we provide an application of this model to a mobile phone dataset for which no information on antennae coverage was available.
+
+## Implementation as an R package : mobicountR
+
+The analysis presented in this paper was implemented using R programming language. To improve reproducibility of results, all functions used were gathered inside an R package called \verb+mobicountR+. A first group of functions consists in tools to build and manage the spatial units used in the analysis. A second group of function is devoted to prior distributions computation for the bayesian model using various statistical sources. A third group of functions serves to implement the bayesian framework, by computing posterior distribution over a given input grid. Finally, we provide a fourth group of functions devoted to diagnostic analysis and quality evaluation by comparison with a given validation data source. This package will be available soon on github[^github].
+
+[^github]: \url{https://github.com/avouacr}
+
